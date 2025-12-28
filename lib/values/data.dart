@@ -97,10 +97,6 @@ class Data {
     NavItemData(name: StringConst.ABOUT, route: StringConst.ABOUT_PAGE),
     NavItemData(name: StringConst.WORKS, route: StringConst.WORKS_PAGE),
     NavItemData(
-      name: StringConst.EXPERIENCE,
-      route: StringConst.EXPERIENCE_PAGE,
-    ),
-    NavItemData(
       name: StringConst.CERTIFICATIONS,
       route: StringConst.CERTIFICATION_PAGE,
     ),
