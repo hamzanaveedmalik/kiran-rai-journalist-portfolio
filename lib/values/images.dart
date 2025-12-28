@@ -7,7 +7,7 @@ class ImagePath {
   static const String screenshotsDir = "assets/screenshots";
 
   //Images
-  static const String DEV = "$imageDir/david_legend.png";
+  static const String DEV = "$imageDir/kiran-rai.jpeg";
 
   static const String VYBZ = "$imageDir/vybz.jpg";
   static const String DAVID = "$imageDir/david.png";
