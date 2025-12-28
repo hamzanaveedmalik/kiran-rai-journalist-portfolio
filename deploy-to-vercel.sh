@@ -8,7 +8,7 @@ cd "$(dirname "$0")"
 
 # Build Flutter web app
 echo "📦 Building Flutter web app..."
-flutter build web --release --web-renderer html
+flutter build web --release
 
 if [ $? -ne 0 ]; then
     echo "❌ Build failed!"
