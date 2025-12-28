@@ -19,3 +19,4 @@ part 'decoration.dart';
 part 'data.dart';
 part 'docs.dart';
 part 'animations.dart';
+part 'youtube_data.dart';

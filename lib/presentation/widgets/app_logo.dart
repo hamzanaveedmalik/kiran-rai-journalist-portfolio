@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AppLogo extends StatelessWidget {
   const AppLogo({
     Key? key,
-    this.title = "DC",
+    this.title = "KR",
     this.titleColor = AppColors.black,
     this.titleStyle,
     this.fontSize = 60,
@@ -20,7 +20,7 @@ class AppLogo extends StatelessWidget {
     return Text(
       title,
       style: titleStyle ??
-          textTheme.headline2?.copyWith(
+          textTheme.displayMedium?.copyWith(
             color: titleColor,
             fontSize: fontSize,
           ),

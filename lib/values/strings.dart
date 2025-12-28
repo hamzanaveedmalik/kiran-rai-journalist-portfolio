@@ -2,8 +2,8 @@ part of values;
 
 class StringConst {
   //strings
-  static const String APP_NAME = "David Legend Portfolio";
-  static const String APP_TITLE = "David Legend Portfolio";
+  static const String APP_NAME = "Kiran Rai Portfolio";
+  static const String APP_TITLE = "Kiran Rai Portfolio";
   static const String SITE_URL = "https://davidcobbina.com";
 
   static const String HOME = "Home";
@@ -21,14 +21,14 @@ class StringConst {
   static const String EMAIL_VALUE = "davidcobbina47@gmail.com";
 
   // Home Page
-  static const String HI = "Hi,";
-  static const String DEV_INTRO = "I'm David.";
-  static const String DEV_TITLE = "Software Engineer.";
-  static const String DEV_DESC = "Mobile Engineer / Full Stack Developer / Cloud Devops";
-  static const String SEE_MY_WORKS = "See my works";
+  static const String HI = "Kiran Rai";
+  static const String DEV_INTRO = "Political & Sports Journalist";
+  static const String DEV_TITLE = "Award-Winning Political, Sports Journalist and Press Assistant.";
+  static const String DEV_DESC = "Kiran Rai is a British journalist, columnist whose work sits at the intersection of sport, politics, power, and culture. With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence.";
+  static const String SEE_MY_WORKS = "See my work";
   static const String SCROLL_DOWN = "Scroll Down";
-  static const String CRAFTED_WITH_LOVE = "Crafted with love.";
-  static const String SELECTION = "Here is selection of my recent works.";
+  static const String CRAFTED_WITH_LOVE = "Coverage Areas";
+  static const String SELECTION = "Comprehensive expertise across political journalism, sports media, and international affairs";
   static const String THERES_MORE = "There's more";
   static const String VIEW_ALL_PROJECTS = "view all projects";
 
@@ -47,32 +47,32 @@ class StringConst {
   static const String MESSAGE_ERROR_MSG =
       "* Please enter something to send this form";
   static const String SEND_MESSAGE = "Send Message";
-  static const String COPYRIGHT = "©  2021  Built by  $DEV_NAME,";
-  static const String DESIGNED_BY = "Designed by Julius G.";
+  static const String COPYRIGHT = "©  2025  Built by  $DEV_NAME,";
+  static const String DESIGNED_BY = "Designed by Intelliwave.";
   static const String DESIGN_LINK =
-      "https://www.behance.net/gallery/63574251/Personal-Portfolio-Website-Design";
+      "www.intelliwave.co";
   static const String MESSAGE_ME = "Message me";
   static const String EMAIL_RESPONSE = "Thanks for reaching out to me! I will get back to you ASAP";
   static const String EMAIL_FAILED_RESPONSE = "Something went wrong. Please send me an email manually - ${StringConst.DEV_EMAIL}";
 
   // About Page
   static const String ABOUT_DEV_CATCH_LINE =
-      "I am a passionate front-end developer and ui/ux designer with a keen eye for details.";
-  static const String ABOUT_DEV_CATCH_LINE_1 = "I specialize in building high ";
+      "Journalist and columnist at the intersection of sport, politics, power, and culture.";
+  static const String ABOUT_DEV_CATCH_LINE_1 = "With over 18 years of ";
   static const String ABOUT_DEV_CATCH_LINE_2 =
-      "quality mobile & web applications.";
+      "fearless reporting and global influence.";
   // static const String ABOUT_DEV_CATCH_LINE_3 = "& web applications";
-  static const String ABOUT_DEV_CATCH_LINE_4 = "I also have a strong";
-  static const String ABOUT_DEV_CATCH_LINE_5 = "passion for opensource work.";
+  static const String ABOUT_DEV_CATCH_LINE_4 = "Covering 65+ major";
+  static const String ABOUT_DEV_CATCH_LINE_5 = "sporting events worldwide.";
   static const String ABOUT_DEV_STORY = "Story";
   static const String ABOUT_DEV_STORY_TITLE =
-      "A little bit about myself.";
+      "About Kiran Rai";
   static const String ABOUT_DEV_STORY_CONTENT_1 =
-      "I am full stack software engineer with great passion for building high quality applications. I have an extensive experience building frontend (mobile & web) and backend applications. I occasionally work as a tech consultant and I am enthusiastic about Devops & Cloud computing technologies.";
+      "One of the world's most widely travelled journalists, Rai has reported from 65 of the globe's most prestigious sporting events, including the FIFA World Cup, Wimbledon, FA Cup Final, Formula 1 Grand Prix, NBA, UFC, MotoGP, WTA Tour, Major League Baseball, ECB international cricket, the Para Athletics World Cup, and the Ballon d'Or ceremony in Paris (2025). His exclusive interviews with boxing legends—Mike Tyson, George Foreman, Larry Holmes, Evander Holyfield, Tyson Fury, Anthony Joshua, and Canelo Álvarez—have made international headlines, establishing him as a leading voice in elite sport.";
   static const String ABOUT_DEV_STORY_CONTENT_2 =
-      "I have a Masters in IT from Carnegie Mellon University where I majored in Software Engineering. I have strong technical skills as well as excellent interpersonal skills, which has enabled me to work & interact with clients all over the world.";
+      "Rai's journalism has appeared in Forbes, GQ, Sports Illustrated, the Daily Express, the Daily Mirror UK, and in over 976 newspapers worldwide. His work has also been featured in Time Magazine, Khaleej Times, Associated Press, Times of India, and Mail Online US. He has served as a Sports Journalist at the Daily Sport, a news reporter at the Daily Express, and a UK contributor for Athlon Sports, solidifying his authority across British and international media.\n\nBeyond sport, Rai operates at the forefront of global politics and diplomacy. He served as assistant to MP Afzal Khan at the UK House of Commons and as a press assistant at the United Nations during COP28, where he challenged world leaders, senior policymakers, and leading scientists on climate change, sustainability, and the future of the planet. At COP28, he was invited to meet Cardinal Miguel Ángel Ayuso Guixot, a cardinal of Pope Francis, reflecting his extraordinary access across political, scientific, and religious leadership.";
   static const String ABOUT_DEV_STORY_CONTENT_3 =
-      "I am very great at finding solutions to problems and I have a very keen eye for details. I enjoy building fun/useful projects in my free time and open sourcing them. I am an avid reader, lover of all forms art & music, a big fan of poetry & I love travelling.";
+      "Rai's political reporting spans continents. He covered the Indian general elections, reporting on both the Congress and BJP campaigns in Delhi, and met Prime Minister Narendra Modi and senior ministers. He also attended Expo 2020 in Dubai, conducting high-profile interviews with foreign ministers and diplomats from around the world, demonstrating his reach in international affairs.\n\nRai has interviewed and interacted with royalty and historic figures worldwide, including HRH Princess Anne, HRH Prince Harry, HRH Prince Richard, HRH Princess Tessy of Luxembourg, Sarah Ferguson, Duchess of York, and HRH Noora Khalifa of the Kingdom of Bahrain. He attended the State Funeral of Queen Elizabeth II at Westminster and a private event at 10 Downing Street with former Prime Minister Boris Johnson, placing him at the heart of historic moments.\n\nIn landmark exclusives, Rai has interviewed Taliban spokesperson Suhail Shaheen ahead of the U.S. military withdrawal from Afghanistan, Nobel Peace Prize laureates, and in personal features, Errol Musk, the father of Elon Musk, offering insight into one of the world's most high-profile families.\n\nRai has forged lasting connections with the legacies of history-makers, including Dr. Bernice King (daughter of Martin Luther King Jr.), Nico Ali Walsh (grandson of Muhammad Ali), and the families of Winston Churchill, Mahatma Gandhi, and Nelson Mandela.\n\nDuring the COVID-19 lockdown in 2020, he conceived The 500 Most Influential People in Asia, a groundbreaking Zoom-based interview series featuring Bollywood superstars, Olympic gold medalists, political leaders, and cultural icons from seven Asian countries, generating over 345 million reshares and coverage in Time Magazine, The Times of India, Khaleej Times, and other leading outlets.\n\nFrom world leaders and royalty to elite athletes, scientists, and cultural icons, Kiran Rai's journalism does more than document events—it interrogates power, shapes global narratives, and connects audiences across continents. His work is not just published; it is remembered, continuing to define the global conversation in an interconnected world.";
   static const String ABOUT_DEV_TECHNOLOGY = "Technology";
   static const String MOBILE_TECH = "Mobile Technologies";
   static const String OTHER_TECH = "Web / Cloud / Design Technologies";
@@ -110,7 +110,7 @@ class StringConst {
 
   static const String VIEW = "View";
   static const String COMING_SOON = "COMING SOON !!";
-  static const String BUILT_WITH_FLUTTER = "Built using ";
+  static const String BUILT_WITH_FLUTTER = "Built";
   static const String DEV_EMAIL = "davidcobbina47@gmail.com";
   static const String EMAIL_URL = "mailto:<$DEV_EMAIL>?subject=&body=";
 
@@ -124,11 +124,11 @@ class StringConst {
   static const String PROJECT_NAME = "Project Name";
 
   static const String INTRO = "Hi, my name is";
-  static const String DEV_NAME = "David Cobbina";
+  static const String DEV_NAME = "Kiran Rai";
   static const String PUNCH_LINE = "I build things with flutter";
   static const String SPECIALITY = "FLUTTER DEV";
-  static const String DESIGNED_IN = "Made in Ghana with ";
-  static const String BUILT_BY = "Built by David Cobbina ";
+  static const String DESIGNED_IN = "Made in London with ";
+  static const String BUILT_BY = "Built by Kiran Rai ";
 
   
   //Form Hint Texts
@@ -181,10 +181,10 @@ class StringConst {
   static const String CONNECT = "Connect with me";
   static const String EMAIL = "Email";
   static const String LINKED_IN = "LinkedIn";
-  static const String TWITTER = "Twitter";
+  static const String TWITTER = "X (formerly Twitter)";
   static const String INSTAGRAM = "Instagram";
   static const String TELEGRAM = "Telegram";
-  static const String GITHUB = "Github";
+  static const String GITHUB = "Instagram";
 
   //Certificate Urls
   static const String CMU_CERT_URL = "https://www.cmu.edu/hub/registrar/graduation/diplomas/electronic/validation/index.html";
@@ -278,9 +278,9 @@ class StringConst {
       "https://github.com/david-legend/david-legend.github.io";
   static const String PORTFOLIO_SITE_V2_WEB_URL = "https://davidcobbina.com/";
 
-  static const String DROP = "Drop";
+  static const String DROP = "Athlon Sports";
   static const String DROP_PLATFORM = "Android / IOS.";
-  static const String DROP_CATEGORY = "Ecommerce.";
+  static const String DROP_CATEGORY = "Sports";
   static const String DROP_DESIGNER = "Stepan Slobodiansky.";
   static const String DROP_SUBTITLE =
       "A beautiful ecommerce mobile application.";
@@ -290,9 +290,13 @@ class StringConst {
   static const String DROP_PLAYSTORE_URL =
       "https://play.google.com/store/apps/details?id=com.davidcobbina.drop";
 
-  static const String NIMBUS = "Nimbus";
+  static const String NIMBUS = "Associated Press";
+  
+  // YouTube section
+  static const String YOUTUBE_SECTION_TITLE = "Featured Videos";
+  static const String YOUTUBE_SECTION_SUBTITLE = "Interviews, appearances, and analysis from across global media";
   static const String NIMBUS_PLATFORM = "Web.";
-  static const String NIMBUS_CATEGORY = "Portfolio / CV.";
+  static const String NIMBUS_CATEGORY = "News Agency";
   static const String NIMBUS_DESIGNER = "Web Genius Labs.";
   static const String NIMBUS_SUBTITLE =
       "Nimbus (Portfolio & CV), a beautifully designed portfolio website.";
@@ -302,9 +306,9 @@ class StringConst {
       "https://github.com/david-legend/nimbus";
   static const String NIMBUS_WEB_URL = "https://david-legend.github.io/nimbus/";
 
-  static const String ROAM = "Roam";
+  static const String ROAM = "Sports Illustrated";
   static const String ROAM_PLATFORM = "Android / IOS.";
-  static const String ROAM_CATEGORY = "Travel.";
+  static const String ROAM_CATEGORY = "Sports";
   static const String ROAM_DESIGNER = "Georgina Sekyi.";
   static const String ROAM_SUBTITLE =
       "UI / UX Case study for a travel advisory app.";
@@ -314,9 +318,9 @@ class StringConst {
   static const String ROAM_PLAYSTORE_URL =
       "https://play.google.com/store/apps/details?id=com.davidcobbina.roam";
 
-  static const String LOGIN_CATALOG = "Login Catalog";
+  static const String LOGIN_CATALOG = "Times";
   static const String LOGIN_CATALOG_PLATFORM = "Android / IOS.";
-  static const String LOGIN_CATALOG_CATEGORY = "UI Kit.";
+  static const String LOGIN_CATALOG_CATEGORY = "British daily national newspaper";
   static const String LOGIN_CATALOG_SUBTITLE =
       "A beautiful catalog of login designs";
   static const String LOGIN_CATALOG_DETAIL =
@@ -326,9 +330,9 @@ class StringConst {
   static const String LOGIN_CATALOG_GITHUB_URL =
       "https://github.com/david-legend/login_catalog";
 
-  static const String FOODY_BITE = "FoodyBite";
+  static const String FOODY_BITE = "Daily Express";
   static const String FOODY_BITE_PLATFORM = "Android / IOS.";
-  static const String FOODY_BITE_CATEGORY = "Food / Restaurant.";
+  static const String FOODY_BITE_CATEGORY = "British national newspaper";
   static const String FOODY_BITE_DESIGNER = "Yagnesh P.";
   static const String FOODY_BITE_SUBTITLE =
       "A useful free ui kit design for food related apps";
@@ -350,9 +354,9 @@ class StringConst {
   static const String OTP_TEXT_FIELD_WEB_URL =
       "https://pub.dev/packages/flutter_otp_text_field";
 
-  static const String DISNEY_PLUS = "Disney Plus";
+  static const String DISNEY_PLUS = "Forbes";
   static const String DISNEY_PLUS_PLATFORM = "Android.";
-  static const String DISNEY_PLUS_CATEGORY = "UI Kit.";
+  static const String DISNEY_PLUS_CATEGORY = "Business";
   static const String DISNEY_PLUS_SUBTITLE =
       "Disney+, But Better";
   static const String DISNEY_PLUS_DETAIL =
@@ -361,9 +365,9 @@ class StringConst {
   static const String DISNEY_PLUS_GITHUB_URL =
       "https://github.com/david-legend/disneyPlus";
 
-  static const String FLUTTER_CATALOG = "Flutter Catalog";
+  static const String FLUTTER_CATALOG = "GQ";
   static const String FLUTTER_CATALOG_PLATFORM = "Android / IOS.";
-  static const String FLUTTER_CATALOG_CATEGORY = "UI Kit.";
+  static const String FLUTTER_CATALOG_CATEGORY = "Fashion";
   static const String FLUTTER_CATALOG_SUBTITLE =
       "A beautiful catalog of login designs";
   static const String FLUTTER_CATALOG_DETAIL =
@@ -479,6 +483,7 @@ class StringConst {
 
   // Font Family
   static const String VISUELT_PRO = "VisueltPro";
+  static const String PLAYFAIR_DISPLAY = "Playfair Display";
 
   //API
   static const String BASE_URL = "https://portfolio-api-liart.vercel.app/api";

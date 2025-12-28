@@ -170,22 +170,27 @@ class _AnimatedLineThroughTextState extends State<AnimatedLineThroughText>
                             ),
                     )
                   : Empty(),
-              Positioned(
-                top: (textHeight / 2) - widget.lineThickness,
-                child: Container(
-                  height: widget.lineThickness,
-                  color: widget.hoverColor,
-                  width: forwardAnimation.value,
-                ),
-              ),
-              Positioned(
-                top: (textHeight / 2) - widget.lineThickness,
-                child: Container(
-                  height: widget.lineThickness,
-                  color: widget.coverColor,
-                  width: backwardsAnimation.value,
-                ),
-              ),
+              // Only show strikethrough lines when underline is not enabled
+              widget.isUnderlinedOnHover
+                  ? Empty()
+                  : Positioned(
+                      top: (textHeight / 2) - widget.lineThickness,
+                      child: Container(
+                        height: widget.lineThickness,
+                        color: widget.hoverColor,
+                        width: forwardAnimation.value,
+                      ),
+                    ),
+              widget.isUnderlinedOnHover
+                  ? Empty()
+                  : Positioned(
+                      top: (textHeight / 2) - widget.lineThickness,
+                      child: Container(
+                        height: widget.lineThickness,
+                        color: widget.coverColor,
+                        width: backwardsAnimation.value,
+                      ),
+                    ),
               widget.hasSlideBoxAnimation
                   ? Empty()
                   : Text(

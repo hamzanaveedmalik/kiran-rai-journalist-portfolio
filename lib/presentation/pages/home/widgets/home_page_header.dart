@@ -46,36 +46,24 @@ class _HomePageHeaderState extends State<HomePageHeader>
     rotationController = AnimationController(
       duration: const Duration(seconds: 20),
       vsync: this,
-    )..repeat();
+    ); // Removed ..repeat() to stop rotation animation
     controller = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: 1500),
-    )..repeat();
+    );
     animation = Tween<Offset>(
-      begin: Offset(0, 0.05),
-      end: Offset(0, -0.05),
+      begin: Offset(0, 0), // Changed to remove floating effect
+      end: Offset(0, 0),   // Both values are now 0 to stop movement
     ).animate(
       CurvedAnimation(
         parent: controller,
         curve: Curves.easeInOut,
       ),
     );
-    controller.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        controller.reverse();
-      } else if (status == AnimationStatus.dismissed) {
-        controller.forward();
-      }
-    });
-    rotationController.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        rotationController.reset();
-        rotationController.forward();
-        // rotationController.reverse();
-      }
-    });
+    // Animation status listener removed to stop floating animation
+    // Rotation animation status listener removed to stop rotation animation
     controller.forward();
-    rotationController.forward();
+    // rotationController.forward(); // Commented out to prevent rotation animation from starting
     super.initState();
   }
 
@@ -101,14 +89,14 @@ class _HomePageHeaderState extends State<HomePageHeader>
       top: responsiveSize(
         context,
         60,
-        screenHeight * 0.35,
+        screenHeight * 0.25,
         sm: screenHeight * 0.35,
       ),
       bottom: responsiveSize(context, 20, 40),
     );
     final EdgeInsets padding = EdgeInsets.symmetric(
       horizontal: screenWidth * 0.1,
-      vertical: screenHeight * 0.1,
+      vertical: screenHeight * 0.065, // Reduced vertical padding by 35%
     );
     final EdgeInsets imageMargin = EdgeInsets.only(
       right: responsiveSize(
@@ -119,9 +107,9 @@ class _HomePageHeaderState extends State<HomePageHeader>
       ),
       top: responsiveSize(
         context,
-        30,
-        screenHeight * 0.25,
-        sm: screenHeight * 0.25,
+        30 * 0.65, // Reduced by 35%
+        screenHeight * 0.15 * 0.65, // Moved up 10% (from 0.25 to 0.15)
+        sm: screenHeight * 0.25 * 0.65, // Reduced by 35%
       ),
       bottom: responsiveSize(context, 20, 40),
     );
@@ -131,15 +119,7 @@ class _HomePageHeaderState extends State<HomePageHeader>
       color: AppColors.accentColor2.withOpacity(0.35),
       child: Stack(
         children: [
-          Container(
-            margin: EdgeInsets.only(
-              top: assignHeight(context, 0.1),
-            ),
-            child: Align(
-              alignment: Alignment.topCenter,
-              child: WhiteCircle(),
-            ),
-          ),
+          // WhiteCircle removed
           ResponsiveBuilder(builder: (context, sizingInformation) {
             double screenWidth = sizingInformation.screenSize.width;
             if (screenWidth < RefinedBreakpoints().tabletNormal) {
@@ -152,13 +132,7 @@ class _HomePageHeaderState extends State<HomePageHeader>
                       position: animation,
                       child: Stack(
                         children: [
-                          RotationTransition(
-                            turns: rotationController,
-                            child: Image.asset(
-                              ImagePath.DEV_SKILLS_2,
-                              width: screenWidth,
-                            ),
-                          ),
+                          // Removed rotation transition
                           Image.asset(
                             ImagePath.DEV_MEDITATE,
                             width: screenWidth,
@@ -201,13 +175,7 @@ class _HomePageHeaderState extends State<HomePageHeader>
                       position: animation,
                       child: Stack(
                         children: [
-                          RotationTransition(
-                            turns: rotationController,
-                            child: Image.asset(
-                              ImagePath.DEV_SKILLS_2,
-                              width: screenWidth * 0.35,
-                            ),
-                          ),
+                          // Removed rotation transition
                           Image.asset(
                             ImagePath.DEV_MEDITATE,
                             width: screenWidth * 0.35,
@@ -307,19 +275,23 @@ class _AboutDevState extends State<AboutDev> {
       parent: widget.controller,
       curve: Interval(0.6, 1.0, curve: Curves.fastOutSlowIn),
     );
-    double headerFontSize = responsiveSize(context, 28, 48, md: 36, sm: 32);
+    final CurvedAnimation headerAnimation = CurvedAnimation(
+      parent: widget.controller,
+      curve: Interval(0.0, 0.6, curve: Curves.fastOutSlowIn),
+    );
+    double headerFontSize = responsiveSize(context, 24, 40, md: 30, sm: 26);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           margin: margin,
-          child: AnimatedTextSlideBoxTransition(
-            controller: widget.controller,
+          child: AnimatedPositionedText(
+            controller: headerAnimation,
             text: StringConst.HI,
             width: widget.width,
             maxLines: 3,
-            textStyle: textTheme.headline2?.copyWith(
-              color: AppColors.black,
+            textStyle: textTheme.displayMedium?.copyWith(
+              color: AppColors.deepNavy,
               fontSize: headerFontSize,
             ),
           ),
@@ -327,13 +299,13 @@ class _AboutDevState extends State<AboutDev> {
         SpaceH12(),
         Container(
           margin: margin,
-          child: AnimatedTextSlideBoxTransition(
-            controller: widget.controller,
+          child: AnimatedPositionedText(
+            controller: headerAnimation,
             text: StringConst.DEV_INTRO,
             width: widget.width,
             maxLines: 3,
-            textStyle: textTheme.headline2?.copyWith(
-              color: AppColors.black,
+            textStyle: textTheme.displayMedium?.copyWith(
+              color: AppColors.deepNavy,
               fontSize: headerFontSize,
             ),
           ),
@@ -341,8 +313,8 @@ class _AboutDevState extends State<AboutDev> {
         SpaceH12(),
         Container(
           margin: margin,
-          child: AnimatedTextSlideBoxTransition(
-            controller: widget.controller,
+          child: AnimatedPositionedText(
+            controller: headerAnimation,
             text: StringConst.DEV_TITLE,
             width: responsiveSize(
               context,
@@ -352,9 +324,9 @@ class _AboutDevState extends State<AboutDev> {
               sm: widget.width,
             ),
             maxLines: 3,
-            textStyle: textTheme.headline2?.copyWith(
-              color: AppColors.black,
-              fontSize: headerFontSize,
+            textStyle: textTheme.displayMedium?.copyWith(
+              color: AppColors.deepNavy,
+              fontSize: Sizes.TEXT_SIZE_16,
             ),
           ),
         ),
@@ -367,7 +339,7 @@ class _AboutDevState extends State<AboutDev> {
             maxLines: 3,
             factor: 2,
             text: StringConst.DEV_DESC,
-            textStyle: textTheme.bodyText1?.copyWith(
+            textStyle: textTheme.bodyLarge?.copyWith(
               fontSize: responsiveSize(
                 context,
                 Sizes.TEXT_SIZE_16,
@@ -375,6 +347,7 @@ class _AboutDevState extends State<AboutDev> {
               ),
               height: 2,
               fontWeight: FontWeight.w400,
+              color: AppColors.deepNavy,
             ),
           ),
         ),
@@ -393,7 +366,7 @@ class _AboutDevState extends State<AboutDev> {
               Radius.circular(100.0),
             ),
             title: StringConst.SEE_MY_WORKS.toUpperCase(),
-            titleStyle: textTheme.bodyText1?.copyWith(
+            titleStyle: textTheme.bodyLarge?.copyWith(
               color: AppColors.black,
               fontSize: responsiveSize(
                 context,
@@ -419,7 +392,7 @@ class _AboutDevState extends State<AboutDev> {
               data: Data.socialData1,
             ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -429,8 +402,8 @@ class _AboutDevState extends State<AboutDev> {
     required List<SocialData> data,
   }) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? style = textTheme.bodyText1?.copyWith(color: AppColors.grey750);
-    TextStyle? slashStyle = textTheme.bodyText1?.copyWith(
+    TextStyle? style = textTheme.bodyLarge?.copyWith(color: AppColors.grey750);
+    TextStyle? slashStyle = textTheme.bodyLarge?.copyWith(
       color: AppColors.grey750,
       fontWeight: FontWeight.w400,
       fontSize: 18,

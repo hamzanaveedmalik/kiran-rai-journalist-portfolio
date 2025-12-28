@@ -1,11 +1,11 @@
 {
-    "name": "David Legend Portfolio",
-    "short_name": "David Legend Portfolio",
+    "name": "Kiran Rai Portfolio",
+    "short_name": "Kiran Rai Portfolio",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Portfolio website for David Legend Portfolio. This portfolio chowcases his education, skills & expertise, experience, acheivements and hobbies.",
+    "description": "Portfolio website for Kiran Rai Portfolio. This portfolio chowcases his education, skills & expertise, experience, acheivements and hobbies.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -89,6 +89,9 @@ class SubMenuData {
 }
 
 class Data {
+  // YouTube videos
+  static List<YouTubeVideoData> get featuredVideos => youtubeVideos;
+  
   static List<NavItemData> menuItems = [
     NavItemData(name: StringConst.HOME, route: StringConst.HOME_PAGE),
     NavItemData(name: StringConst.ABOUT, route: StringConst.ABOUT_PAGE),
@@ -107,7 +110,7 @@ class Data {
   static List<SocialData> socialData = [
     SocialData(
       name: StringConst.GITHUB,
-      iconData: FontAwesomeIcons.github,
+      iconData: FontAwesomeIcons.instagram,
       url: StringConst.GITHUB_URL,
     ),
     SocialData(
@@ -117,7 +120,7 @@ class Data {
     ),
     SocialData(
       name: StringConst.TWITTER,
-      iconData: FontAwesomeIcons.twitter,
+      iconData: FontAwesomeIcons.xTwitter,
       url: StringConst.TWITTER_URL,
     ),
     SocialData(
@@ -171,7 +174,7 @@ class Data {
   static List<SocialData> socialData1 = [
     SocialData(
       name: StringConst.GITHUB,
-      iconData: FontAwesomeIcons.github,
+      iconData: FontAwesomeIcons.instagram,
       url: StringConst.GITHUB_URL,
     ),
     SocialData(
@@ -181,9 +184,21 @@ class Data {
     ),
     SocialData(
       name: StringConst.TWITTER,
-      iconData: FontAwesomeIcons.twitter,
+      iconData: FontAwesomeIcons.xTwitter,
       url: StringConst.TWITTER_URL,
     ),
+  ];
+  
+  // News ticker logos
+  static List<String> tickerLogos = [
+    ImagePath.FORBES,
+    ImagePath.ASSOCIATED_PRESS,
+    ImagePath.ATHLON_SPORTS,
+    ImagePath.DAILY_EXPRESS,
+    ImagePath.GQ,
+    ImagePath.KHALEEJ_TIMES,
+    ImagePath.SPORTS_ILLUSTRATED,
+    ImagePath.TIME_MAGAZINE,
   ];
 
   static List<SocialData> socialData2 = [
@@ -194,7 +209,7 @@ class Data {
     ),
     SocialData(
       name: StringConst.TWITTER,
-      iconData: FontAwesomeIcons.twitter,
+      iconData: FontAwesomeIcons.xTwitter,
       url: StringConst.TWITTER_URL,
     ),
     SocialData(
@@ -672,3 +687,138 @@ class Projects {
     webUrl: StringConst.OUTFITR_WEB_URL,
   );
 }
+
+
+// Add this as a top-level list, then we'll refer to it from a getter in the Data class
+List<YouTubeVideoData> youtubeVideos = [
+    YouTubeVideoData(
+      title: "Kiran Rai Interview",
+      videoId: "4uaR0J53qys",
+      description: "Media appearance",
+    ),
+    YouTubeVideoData(
+      title: "Sports Analysis",
+      videoId: "4QzCoFeWQPI",
+      description: "Breaking down recent sports events",
+    ),
+    YouTubeVideoData(
+      title: "Political Commentary",
+      videoId: "_OvcsfBc6KM",
+      description: "Discussing current affairs",
+    ),
+    YouTubeVideoData(
+      title: "Press Conference",
+      videoId: "duxYJuUBGu8",
+      description: "Live from recent event",
+    ),
+    YouTubeVideoData(
+      title: "Expert Panel",
+      videoId: "qnXhcB8Px6I",
+      description: "International affairs discussion",
+    ),
+    YouTubeVideoData(
+      title: "Special Report",
+      videoId: "Q_Av5bafsWQ",
+      description: "In-depth analysis",
+    ),
+    YouTubeVideoData(
+      title: "Live Interview",
+      videoId: "nGIZT-EzGbQ",
+      description: "Media appearance",
+    ),
+    YouTubeVideoData(
+      title: "Sports Event Coverage",
+      videoId: "MvNjsS6dR2k",
+      description: "On location reporting",
+    ),
+    YouTubeVideoData(
+      title: "Breaking News",
+      videoId: "ItdweCmlbNg",
+      description: "Latest developments",
+    ),
+    YouTubeVideoData(
+      title: "Featured Story",
+      videoId: "Mr9-mrPEgLU",
+      description: "Exclusive report",
+    ),
+    YouTubeVideoData(
+      title: "Political Analysis",
+      videoId: "HC_Gi0FQ_KE",
+      description: "Expert commentary",
+    ),
+    YouTubeVideoData(
+      title: "Sports Discussion",
+      videoId: "724XtUbJSdM",
+      description: "Game breakdown",
+    ),
+    YouTubeVideoData(
+      title: "News Report",
+      videoId: "ckm5nY_0Bvs",
+      description: "Latest coverage",
+    ),
+    YouTubeVideoData(
+      title: "Interview Session",
+      videoId: "opi75vzaPh0",
+      description: "Exclusive conversation",
+    ),
+    YouTubeVideoData(
+      title: "Panel Discussion",
+      videoId: "kVplRai7Khg",
+      description: "Expert opinions",
+    ),
+    YouTubeVideoData(
+      title: "Live Coverage",
+      videoId: "ZTQOL0siMLE",
+      description: "Breaking news",
+    ),
+    YouTubeVideoData(
+      title: "Documentary Feature",
+      videoId: "uxdyvjYPdKM",
+      description: "In-depth story",
+    ),
+    YouTubeVideoData(
+      title: "Press Briefing",
+      videoId: "mFYdWzhqAJU",
+      description: "Official statement",
+    ),
+    YouTubeVideoData(
+      title: "Analysis & Commentary",
+      videoId: "LQMCtbwz2Eo",
+      description: "Political insights",
+    ),
+    YouTubeVideoData(
+      title: "Sports Highlights",
+      videoId: "3BIfg5RGlkk",
+      description: "Event coverage",
+    ),
+    YouTubeVideoData(
+      title: "Exclusive Interview",
+      videoId: "c7K7-1X66_o",
+      description: "One-on-one",
+    ),
+    YouTubeVideoData(
+      title: "Field Report",
+      videoId: "Ltx7_fFAwdg",
+      description: "On-site coverage",
+    ),
+    YouTubeVideoData(
+      title: "Studio Discussion",
+      videoId: "JRaeuew-HsM",
+      description: "Expert panel",
+    ),
+    YouTubeVideoData(
+      title: "News Update",
+      videoId: "mg9KPe4gaAQ",
+      description: "Current events",
+    ),
+    YouTubeVideoData(
+      title: "Special Investigation",
+      videoId: "QuwoHEqcylQ",
+      description: "Investigative report",
+    ),
+    YouTubeVideoData(
+      title: "Event Coverage",
+      videoId: "YGJnRwtt-TQ",
+      description: "Live from the scene",
+    ),
+  ];

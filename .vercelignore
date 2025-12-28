@@ -1,0 +1,25 @@
+# Build output
+build/
+.dart_tool/
+
+# Flutter/Dart related
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+
+# IDE related
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS related
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
+

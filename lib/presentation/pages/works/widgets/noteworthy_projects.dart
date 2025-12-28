@@ -37,7 +37,7 @@ class _NoteWorthyProjectsState extends State<NoteWorthyProjects>
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? titleStyle = textTheme.subtitle1?.copyWith(
+    TextStyle? titleStyle = textTheme.titleMedium?.copyWith(
       color: AppColors.black,
       fontSize: responsiveSize(
         context,
@@ -45,7 +45,7 @@ class _NoteWorthyProjectsState extends State<NoteWorthyProjects>
         Sizes.TEXT_SIZE_30,
       ),
     );
-    TextStyle? bodyText1Style = textTheme.bodyText1?.copyWith(
+    TextStyle? bodyText1Style = textTheme.bodyLarge?.copyWith(
       fontSize: responsiveSize(
         context,
         Sizes.TEXT_SIZE_16,
@@ -153,18 +153,18 @@ class NoteWorthyProjectItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? defaultNumberStyle = textTheme.subtitle1?.copyWith(
+    TextStyle? defaultNumberStyle = textTheme.titleMedium?.copyWith(
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.grey550,
       fontWeight: FontWeight.w400,
     );
-    TextStyle? defaultSourceStyle = textTheme.subtitle1?.copyWith(
+    TextStyle? defaultSourceStyle = textTheme.titleMedium?.copyWith(
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.grey700,
       fontWeight: FontWeight.w400,
       decoration: TextDecoration.underline,
     );
-    TextStyle? defaultProjectNameStyle = textTheme.subtitle1?.copyWith(
+    TextStyle? defaultProjectNameStyle = textTheme.titleMedium?.copyWith(
       fontSize: responsiveSize(
         context,
         Sizes.TEXT_SIZE_16,

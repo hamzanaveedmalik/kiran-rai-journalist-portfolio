@@ -151,6 +151,7 @@ class _PageWrapperState extends State<PageWrapper>
             controller: forwardSlideController,
             width: widthOfScreen(context),
             height: heightOfScreen(context),
+            color: AppColors.deepNavy,
           ),
           widget.hasUnveilPageAnimation
               ? Positioned(
@@ -161,6 +162,7 @@ class _PageWrapperState extends State<PageWrapper>
                     width: widthOfScreen(context),
                     height: heightOfScreen(context),
                     isSlideForward: false,
+                    color: AppColors.deepNavy,
                   ),
                 )
               : widget.customLoadingAnimation,

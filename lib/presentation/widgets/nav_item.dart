@@ -99,10 +99,10 @@ class _NavItemState extends State<NavItem> {
                   alignment: Alignment.center,
                   child: AnimatedLineThroughText(
                     text: widget.title.toLowerCase(),
-                    isUnderlinedOnHover: false,
+                    isUnderlinedOnHover: true,
                     textStyle: widget.titleStyle ??
                         widget.titleStyle ??
-                        textTheme.headline6?.copyWith(
+                        textTheme.titleLarge?.copyWith(
                           fontSize: selectedTextSize,
                           color: AppColors.accentColor,
                           fontWeight: FontWeight.w400,
@@ -110,7 +110,7 @@ class _NavItemState extends State<NavItem> {
                     hoverColor: AppColors.accentColor,
                     coverColor: AppColors.black,
                     lineThickness: 4,
-                    onHoverTextStyle: textTheme.headline6?.copyWith(
+                    onHoverTextStyle: textTheme.titleLarge?.copyWith(
                       fontSize: selectedTextSize,
                       color: AppColors.accentColor,
                       fontWeight: FontWeight.w400,
@@ -141,16 +141,16 @@ class _NavItemState extends State<NavItem> {
                     alignment: Alignment.center,
                     child: AnimatedLineThroughText(
                       text: widget.title.toLowerCase(),
-                      isUnderlinedOnHover: false,
+                      isUnderlinedOnHover: true,
                       textStyle: widget.titleStyle ??
-                          textTheme.bodyText1?.copyWith(
+                          textTheme.bodyLarge?.copyWith(
                             fontSize: unselectedTextSize,
                             fontWeight: FontWeight.w400,
                           ),
                       hoverColor: AppColors.accentColor,
                       coverColor: AppColors.black,
                       lineThickness: 4,
-                      onHoverTextStyle: textTheme.bodyText1?.copyWith(
+                      onHoverTextStyle: textTheme.bodyLarge?.copyWith(
                         fontSize: unselectedTextSize,
                         color: AppColors.accentColor,
                         fontWeight: FontWeight.w400,
@@ -172,12 +172,12 @@ class _NavItemState extends State<NavItem> {
       Sizes.TEXT_SIZE_16,
       md: Sizes.TEXT_SIZE_15,
     );
-    TextStyle? defaultSelectedItemStyle = textTheme.bodyText1?.copyWith(
+    TextStyle? defaultSelectedItemStyle = textTheme.bodyLarge?.copyWith(
       fontSize: textSize,
       color: widget.selectedColor,
       fontWeight: FontWeight.w400,
     );
-    TextStyle? defaultUnselectedItemStyle = textTheme.bodyText1?.copyWith(
+    TextStyle? defaultUnselectedItemStyle = textTheme.bodyLarge?.copyWith(
       fontSize: textSize,
       color: widget.titleColor,
     );
@@ -185,16 +185,15 @@ class _NavItemState extends State<NavItem> {
     return widget.isSelected
         ? AnimatedLineThroughText(
             text: widget.title,
-            isUnderlinedOnHover: false,
-            hasOffsetAnimation: true,
-            hasSlideBoxAnimation: true,
-            controller: widget.controller,
+            isUnderlinedOnHover: true,
+            hasOffsetAnimation: false,
+            hasSlideBoxAnimation: false,
             textStyle: widget.titleStyle ?? defaultSelectedItemStyle,
           )
         : AnimatedLineThroughText(
             text: widget.title,
-            isUnderlinedOnHover: false,
-            hasOffsetAnimation: true,
+            isUnderlinedOnHover: true,
+            hasOffsetAnimation: false,
             textStyle: widget.titleStyle ?? defaultUnselectedItemStyle,
             onHoverTextStyle: defaultUnselectedItemStyle?.copyWith(
               color: widget.selectedColor,
@@ -210,7 +209,7 @@ class _NavItemState extends State<NavItem> {
       child: Text(
         '0$index',
         style: widget.titleStyle ??
-            textTheme.headline2?.copyWith(
+            textTheme.displayMedium?.copyWith(
               fontSize: indexTextSize,
               color: AppColors.grey800,
               // fontWeight: FontWeight.w400,

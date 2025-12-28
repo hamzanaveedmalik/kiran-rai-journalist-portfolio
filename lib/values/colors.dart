@@ -11,6 +11,7 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
   static const Color black100 = Color(0xFF303030);
+  static const Color deepNavy = Color(0xFF0B0D25);
   static const Color textSelectionColor = Color(0xFF1C00FF);
 
 
@@ -32,9 +33,9 @@ class AppColors {
 
   // Project Primary Colors
   // static const Color disneyPlus = Color(0xFF000000);
-  static const Color disneyPlus = Color(0xFFB41100);
+  static const Color disneyPlus = Color(0xFF073763);
 
-  static const Color nimbus = Color(0xFFF6C350);
+  static const Color nimbus = Color(0xFF841816);
   static const Color nimbusNavTitle = AppColors.black;
   static const Color nimbusSelectedNavTitle = Color(0xFFF6C350);
 

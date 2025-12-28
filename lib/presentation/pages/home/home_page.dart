@@ -11,6 +11,9 @@ import 'package:aerium/presentation/widgets/custom_spacer.dart';
 import 'package:aerium/presentation/widgets/page_wrapper.dart';
 import 'package:aerium/presentation/widgets/project_item.dart';
 import 'package:aerium/presentation/widgets/spaces.dart';
+import 'package:aerium/presentation/widgets/stats_bar.dart';
+import 'package:aerium/presentation/widgets/logo_ticker_bar.dart';
+import 'package:aerium/presentation/widgets/youtube_section.dart';
 import 'package:flutter/material.dart';
 import 'package:aerium/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -33,6 +36,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late AnimationController _viewProjectsController;
   late AnimationController _recentWorksController;
   late AnimationController _slideTextController;
+  late AnimationController _youtubeController;
   late NavigationArguments _arguments;
 
   @override
@@ -47,6 +51,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       duration: Animations.slideAnimationDurationLong,
     );
     _recentWorksController = AnimationController(
+      vsync: this,
+      duration: Animations.slideAnimationDurationLong,
+    );
+    _youtubeController = AnimationController(
       vsync: this,
       duration: Animations.slideAnimationDurationLong,
     );
@@ -71,6 +79,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     _viewProjectsController.dispose();
     _slideTextController.dispose();
     _scrollController.dispose();
+    _youtubeController.dispose();
     super.dispose();
   }
 
@@ -81,7 +90,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     double subHeight = (3 / 4) * projectItemHeight;
     double extra = projectItemHeight - subHeight;
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? textButtonStyle = textTheme.headline4?.copyWith(
+    TextStyle? textButtonStyle = textTheme.headlineSmall?.copyWith(
       color: AppColors.black,
       fontSize: responsiveSize(context, 30, 40, md: 36, sm: 32),
       height: 2.0,
@@ -105,7 +114,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       },
       customLoadingAnimation: LoadingHomePageAnimation(
         text: StringConst.DEV_NAME,
-        style: textTheme.headline4!.copyWith(color: AppColors.white),
+        style: textTheme.headlineSmall!.copyWith(color: AppColors.white),
         onLoadingDone: () {
           _slideTextController.forward();
         },
@@ -123,6 +132,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             scrollToWorksKey: key,
           ),
           CustomSpacer(heightFactor: 0.1),
+          LogoTickerBar(),
+          StatsBar(),
+          CustomSpacer(heightFactor: 0.05),
           VisibilityDetector(
             key: Key('recent-projects'),
             onVisibilityChanged: (visibilityInfo) {
@@ -140,7 +152,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   AnimatedTextSlideBoxTransition(
                     controller: _recentWorksController,
                     text: StringConst.CRAFTED_WITH_LOVE,
-                    textStyle: textTheme.headline4?.copyWith(
+                    textStyle: textTheme.headlineSmall?.copyWith(
                       color: AppColors.black,
                       fontSize: responsiveSize(context, 30, 48, md: 40, sm: 36),
                       height: 2.0,
@@ -153,7 +165,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       curve: Interval(0.6, 1.0, curve: Curves.fastOutSlowIn),
                     ),
                     text: StringConst.SELECTION,
-                    textStyle: textTheme.bodyText1?.copyWith(
+                    textStyle: textTheme.bodyLarge?.copyWith(
                       fontSize: responsiveSize(
                         context,
                         Sizes.TEXT_SIZE_16,
@@ -202,7 +214,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               children: [
                 Text(
                   StringConst.THERES_MORE.toUpperCase(),
-                  style: textTheme.bodyText1?.copyWith(
+                  style: textTheme.bodyLarge?.copyWith(
                     fontSize: responsiveSize(context, 11, Sizes.TEXT_SIZE_12),
                     letterSpacing: 2,
                     fontWeight: FontWeight.w300,
@@ -244,6 +256,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ),
               ],
+            ),
+          ),
+          CustomSpacer(heightFactor: 0.15),
+          VisibilityDetector(
+            key: Key('youtube-section'),
+            onVisibilityChanged: (visibilityInfo) {
+              double visiblePercentage = visibilityInfo.visibleFraction * 100;
+              if (visiblePercentage > 45) {
+                _youtubeController.forward();
+              }
+            },
+            child: YouTubeSection(
+              controller: _youtubeController,
             ),
           ),
           CustomSpacer(heightFactor: 0.15),

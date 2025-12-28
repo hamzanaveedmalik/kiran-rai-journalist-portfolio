@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:aerium/values/values.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static const _lightFillColor = Colors.black;
@@ -16,6 +15,7 @@ class AppTheme {
     return ThemeData(
       colorScheme: colorScheme,
       textTheme: _textTheme,
+      fontFamily: 'VisueltPro',
       iconTheme: IconThemeData(color: AppColors.white),
       canvasColor: colorScheme.background,
       appBarTheme: AppBarTheme(
@@ -44,7 +44,7 @@ class AppTheme {
     // secondaryVariant: AppColors.black,
     background: AppColors.primaryColor,
     surface: AppColors.primaryColor,
-    onBackground: Colors.white,
+    onBackground: Colors.white, // White text on blue background for better readability
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,
@@ -60,80 +60,85 @@ class AppTheme {
   static const _light = FontWeight.w300;
 
   static final TextTheme _textTheme = TextTheme(
-    headline1: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    displayLarge: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_96,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline2: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    displayMedium: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_60,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline3: GoogleFonts.roboto(
+    displaySmall: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_48,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline4: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    headlineLarge: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_34,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline5: GoogleFonts.roboto(
+    headlineMedium: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_24,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline6: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    headlineSmall: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_20,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle1: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    titleLarge: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle2: GoogleFonts.roboto(
+    titleMedium: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    bodyText1: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    bodyLarge: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    bodyText2: GoogleFonts.roboto(
+    bodyMedium: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    button: GoogleFonts.roboto(
+    labelLarge: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontStyle: FontStyle.normal,
       fontWeight: _medium,
     ),
-    caption: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
+    bodySmall: TextStyle(
+      fontFamily: 'VisueltPro',
       fontSize: Sizes.TEXT_SIZE_12,
       color: AppColors.white,
       fontWeight: _regular,

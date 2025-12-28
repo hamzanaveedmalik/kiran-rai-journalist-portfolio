@@ -32,12 +32,24 @@ class ImagePath {
   static const String MEDITATION = "$imageDir/meditation.png";
   static const String ABOUT_PORTRAIT = "$imageDir/about_portrait.png";
   static const String DEV_ABOUT = "$imageDir/dev-about.jpg";
-  static const String DEV_MEDITATE = "$imageDir/dev_meditate.png";
+  static const String DEV_MEDITATE = "$imageDir/cop-28.png";
   
   static const String DEV_SKILLS = "$imageDir/skills.png";
   static const String DEV_SKILLS_1 = "$imageDir/skills1.png";
   static const String DEV_SKILLS_2 = "$imageDir/skills2.png";
   static const String GOOGLE_PLAY = "$imageDir/google_play.png";
+  
+  // Logo ticker images
+  static const String tickerLogoDir = "$imageDir/ticker-logos";
+  static const String FORBES = "$tickerLogoDir/forbes.svg";
+  static const String ASSOCIATED_PRESS = "$tickerLogoDir/associated-press.svg";
+  static const String ATHLON_SPORTS = "$tickerLogoDir/athlon-sports.svg";
+  static const String DAILY_EXPRESS = "$tickerLogoDir/daily-express.svg";
+  static const String GQ = "$tickerLogoDir/gq.svg";
+  static const String KHALEEJ_TIMES = "$tickerLogoDir/khaleej-times.svg";
+  static const String SPORTS_ILLUSTRATED = "$tickerLogoDir/sports-illustrated.svg";
+  static const String TIME_MAGAZINE = "$tickerLogoDir/time-magazine.svg";
+  
 
   // Certifications
   static const String ANDROID_BASICS_CERT = "$imageDir/android_basics_cert.png";

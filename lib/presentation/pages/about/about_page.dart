@@ -103,7 +103,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
     );
 
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? bodyText1Style = textTheme.bodyText1?.copyWith(
+    TextStyle? bodyText1Style = textTheme.bodyLarge?.copyWith(
       fontSize: Sizes.TEXT_SIZE_18,
       color: AppColors.grey750,
       fontWeight: FontWeight.w400,
@@ -111,8 +111,8 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       // letterSpacing: 2,
     );
     TextStyle? bodyText2Style =
-        textTheme.bodyText1?.copyWith(color: AppColors.grey750);
-    TextStyle? titleStyle = textTheme.subtitle1?.copyWith(
+        textTheme.bodyLarge?.copyWith(color: AppColors.grey750);
+    TextStyle? titleStyle = textTheme.titleMedium?.copyWith(
       color: AppColors.black,
       fontSize: responsiveSize(
         context,
@@ -333,7 +333,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           child: AnimatedTextSlideBoxTransition(
                             controller: _quoteController,
                             text: "— ${StringConst.FAMOUS_QUOTE_AUTHOR}",
-                            textStyle: textTheme.bodyText1?.copyWith(
+                            textStyle: textTheme.bodyLarge?.copyWith(
                               fontSize: responsiveSize(
                                 context,
                                 Sizes.TEXT_SIZE_16,
@@ -362,8 +362,8 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
 
   List<Widget> _buildSocials(List<SocialData> data) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    TextStyle? style = textTheme.bodyText1?.copyWith(color: AppColors.grey750);
-    TextStyle? slashStyle = textTheme.bodyText1?.copyWith(
+    TextStyle? style = textTheme.bodyLarge?.copyWith(color: AppColors.grey750);
+    TextStyle? slashStyle = textTheme.bodyLarge?.copyWith(
       color: AppColors.grey750,
       fontWeight: FontWeight.w400,
       fontSize: 18,
