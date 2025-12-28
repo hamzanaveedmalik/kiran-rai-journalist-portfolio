@@ -57,9 +57,9 @@ class StringConst {
   // About Page
   static const String ABOUT_DEV_CATCH_LINE =
       "Journalist and columnist at the intersection of sport, politics, power, and culture.";
-  static const String ABOUT_DEV_CATCH_LINE_1 = "With over 18 years of ";
+  static const String ABOUT_DEV_CATCH_LINE_1 = "Kiran Rai is a British journalist, columnist whose work sits";
   static const String ABOUT_DEV_CATCH_LINE_2 =
-      "fearless reporting and global influence.";
+      "at the intersection of sport, politics, power, and culture. With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence.";
   // static const String ABOUT_DEV_CATCH_LINE_3 = "& web applications";
   static const String ABOUT_DEV_CATCH_LINE_4 = "Covering 65+ major";
   static const String ABOUT_DEV_CATCH_LINE_5 = "sporting events worldwide.";
