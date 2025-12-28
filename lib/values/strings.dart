@@ -82,8 +82,8 @@ class StringConst {
   static const String ABOUT_DEV_CONTACT_SOCIAL = "Social.";
   static const String ABOUT_DEV_CONTACT_EMAIL = "Email.";
   static const String FAMOUS_QUOTE =
-      "“I have no special talents. I am only passionately curious.”";
-  static const String FAMOUS_QUOTE_AUTHOR = "Albert Einstein";
+      ""The purpose of journalism is thus to provide citizens with the information they need to make the best possible decisions about their lives, their communities, their societies, and their governments."";
+  static const String FAMOUS_QUOTE_AUTHOR = "Bill Kovach & Tom Rosenstiel";
   static const String WORK_TOGETHER = "Let's work together.";
   static const String AVAILABLE_FOR_FREELANCE =
       "I'm available for journalism commissions, interviews, and editorial work.";

@@ -203,11 +203,6 @@ class Data {
       iconData: FontAwesomeIcons.instagram,
       url: StringConst.INSTAGRAM_URL,
     ),
-    SocialData(
-      name: StringConst.TELEGRAM,
-      iconData: FontAwesomeIcons.telegram,
-      url: StringConst.TELEGRAM_URL,
-    ),
   ];
 
   static List<ProjectItemData> recentWorks = [
