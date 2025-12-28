@@ -18,7 +18,7 @@ class StringConst {
   static const String PHONE_NUMBER = "Phone Number";
   static const String RESUME = "Resume";
   static const String CERTIFICATIONS = "Certifications";
-  static const String EMAIL_VALUE = "davidcobbina47@gmail.com";
+  static const String EMAIL_VALUE = "j.goreproductions@hotmail.co.uk";
 
   // Home Page
   static const String HI = "Kiran Rai";
@@ -57,12 +57,12 @@ class StringConst {
   // About Page
   static const String ABOUT_DEV_CATCH_LINE =
       "Journalist and columnist at the intersection of sport, politics, power, and culture.";
-  static const String ABOUT_DEV_CATCH_LINE_1 = "Kiran Rai is a British journalist, columnist whose work sits";
+  static const String ABOUT_DEV_CATCH_LINE_1 = "With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence";
   static const String ABOUT_DEV_CATCH_LINE_2 =
-      "at the intersection of sport, politics, power, and culture. With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence.";
+      "at the intersection of sport, politics, power, and culture.";
   // static const String ABOUT_DEV_CATCH_LINE_3 = "& web applications";
-  static const String ABOUT_DEV_CATCH_LINE_4 = "Covering 65+ major";
-  static const String ABOUT_DEV_CATCH_LINE_5 = "sporting events worldwide.";
+  static const String ABOUT_DEV_CATCH_LINE_4 = "";
+  static const String ABOUT_DEV_CATCH_LINE_5 = "";
   static const String ABOUT_DEV_STORY = "Story";
   static const String ABOUT_DEV_STORY_TITLE =
       "About Kiran Rai";
@@ -110,7 +110,7 @@ class StringConst {
   static const String VIEW = "View";
   static const String COMING_SOON = "COMING SOON !!";
   static const String BUILT_WITH_FLUTTER = "Built";
-  static const String DEV_EMAIL = "davidcobbina47@gmail.com";
+  static const String DEV_EMAIL = "j.goreproductions@hotmail.co.uk";
   static const String EMAIL_URL = "mailto:<$DEV_EMAIL>?subject=&body=";
 
   static const String KEY_SKILLS = "KEY SKILLS";
