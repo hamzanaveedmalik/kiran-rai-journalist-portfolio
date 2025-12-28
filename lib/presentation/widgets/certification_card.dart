@@ -104,12 +104,47 @@ class _CertificationCardState extends State<CertificationCard>
           onExit: (e) => _mouseEnter(false),
           child: Stack(
             children: [
-              Image.asset(
-                widget.imageUrl,
-                width: widget.width,
-                height: widget.height,
-                fit: BoxFit.cover,
-              ),
+              widget.imageUrl.endsWith('.pdf')
+                  ? Container(
+                      width: widget.width,
+                      height: widget.height,
+                      color: AppColors.grey100,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.picture_as_pdf,
+                            size: 64,
+                            color: AppColors.grey500,
+                          ),
+                          SpaceH8(),
+                          Text(
+                            'PDF Document',
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  color: AppColors.grey500,
+                                ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : Image.asset(
+                      widget.imageUrl,
+                      width: widget.width,
+                      height: widget.height,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          width: widget.width,
+                          height: widget.height,
+                          color: AppColors.grey100,
+                          child: Icon(
+                            Icons.broken_image,
+                            size: 64,
+                            color: AppColors.grey500,
+                          ),
+                        );
+                      },
+                    ),
               // if it is not a tablet or mobile device, allow on hover effect
               !widget.isMobileOrTablet && _hovering
                   ? FadeTransition(

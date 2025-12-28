@@ -205,6 +205,11 @@ class Data {
     ),
   ];
 
+  static List<String> get photoPaths {
+    const String photosDir = "${ImagePath.imageDir}/photos";
+    return List.generate(85, (index) => "$photosDir/${index + 1}.jpeg");
+  }
+
   static List<ProjectItemData> recentWorks = [
     Projects.DISNEY_PLUS,
     Projects.FLUTTER_CATALOG,
@@ -226,7 +231,6 @@ class Data {
     Projects.OTP_TEXT_FIELD,
     Projects.AERIUM,
     Projects.AERIUM_V2,
-    Projects.OUTFITR,
   ];
 
   static List<NoteWorthyProjectDetails> noteworthyProjects = [
@@ -305,39 +309,39 @@ class Data {
 
   static List<CertificationData> certificationData = [
     CertificationData(
-      title: StringConst.MSC_IT,
-      url: StringConst.CMU_CERT_URL,
-      image: ImagePath.CMU_MASTERS_CERT,
+      title: "Certification 1",
+      url: ImagePath.CERT_1_JPEG,
+      image: ImagePath.CERT_1_JPEG,
       imageSize: 0.325,
-      awardedBy: StringConst.CMU,
+      awardedBy: "Certificate",
     ),
     CertificationData(
-      title: StringConst.ASSOCIATE_ANDROID_DEV,
-      url: StringConst.ASSOCIATE_ANDROID_DEV_URL,
-      image: ImagePath.ASSOCIATE_ANDROID_DEV,
+      title: "Certification 2",
+      url: ImagePath.CERT_2_JPEG,
+      image: ImagePath.CERT_2_JPEG,
       imageSize: 0.325,
-      awardedBy: StringConst.GOOGLE,
+      awardedBy: "Certificate",
     ),
     CertificationData(
-      title: StringConst.CLOUD_DEVELOPER,
-      url: StringConst.CLOUD_DEVELOPER_URL,
-      image: ImagePath.CLOUD_DEVELOPER_CERT,
+      title: "Certification 3",
+      url: ImagePath.CERT_3_JPEG,
+      image: ImagePath.CERT_3_JPEG,
       imageSize: 0.325,
-      awardedBy: StringConst.UDACITY,
+      awardedBy: "Certificate",
     ),
     CertificationData(
-      title: StringConst.DATA_SCIENCE,
-      url: StringConst.DATA_SCIENCE_CERT_URL,
-      image: ImagePath.DATA_SCIENCE_CERT,
+      title: "Letter of Support",
+      url: ImagePath.CERT_1_PDF,
+      image: ImagePath.CERT_1_PDF,
       imageSize: 0.325,
-      awardedBy: StringConst.UDACITY,
+      awardedBy: "Document",
     ),
     CertificationData(
-      title: StringConst.ANDROID_BASICS,
-      url: StringConst.ANDROID_BASICS_CERT_URL,
-      image: ImagePath.ANDROID_BASICS_CERT,
+      title: "Media Accreditation",
+      url: ImagePath.CERT_2_PDF,
+      image: ImagePath.CERT_2_PDF,
       imageSize: 0.325,
-      awardedBy: StringConst.UDACITY,
+      awardedBy: "Document",
     ),
   ];
 
@@ -425,6 +429,7 @@ class Projects {
     technologyUsed: StringConst.JETPACK_COMPOSE,
     gitHubUrl: StringConst.DISNEY_PLUS_GITHUB_URL,
     playStoreUrl: StringConst.DISNEY_PLUS_PLAYSTORE_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData FLUTTER_CATALOG = ProjectItemData(
     title: StringConst.FLUTTER_CATALOG,
@@ -450,6 +455,7 @@ class Projects {
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.FLUTTER_CATALOG_GITHUB_URL,
     playStoreUrl: StringConst.FLUTTER_CATALOG_PLAYSTORE_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData DROP = ProjectItemData(
     title: StringConst.DROP,
@@ -478,6 +484,7 @@ class Projects {
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.DROP_GITHUB_URL,
     playStoreUrl: StringConst.DROP_PLAYSTORE_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData ROAM = ProjectItemData(
     title: StringConst.ROAM,
@@ -508,6 +515,7 @@ class Projects {
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.ROAM_GITHUB_URL,
     playStoreUrl: StringConst.ROAM_PLAYSTORE_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData LOGIN_CATALOG = ProjectItemData(
     title: StringConst.LOGIN_CATALOG,
@@ -533,6 +541,7 @@ class Projects {
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.LOGIN_CATALOG_GITHUB_URL,
     playStoreUrl: StringConst.LOGIN_CATALOG_PLAYSTORE_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData FOODY_BITE = ProjectItemData(
     title: StringConst.FOODY_BITE,
@@ -559,6 +568,7 @@ class Projects {
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.FOODY_BITE_GITHUB_URL,
     playStoreUrl: StringConst.FOODY_BITE_PLAYSTORE_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData NIMBUS = ProjectItemData(
     title: StringConst.NIMBUS,
@@ -580,7 +590,7 @@ class Projects {
     isLive: true,
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.NIMBUS_GITHUB_URL,
-    webUrl: StringConst.NIMBUS_WEB_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData OTP_TEXT_FIELD = ProjectItemData(
     title: StringConst.OTP_TEXT_FIELD,
@@ -598,7 +608,7 @@ class Projects {
     isLive: true,
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.OTP_TEXT_FIELD_GITHUB_URL,
-    webUrl: StringConst.OTP_TEXT_FIELD_WEB_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData AERIUM = ProjectItemData(
     title: StringConst.AERIUM,
@@ -620,7 +630,7 @@ class Projects {
     isLive: true,
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.AERIUM_GITHUB_URL,
-    webUrl: StringConst.AERIUM_WEB_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData AERIUM_V2 = ProjectItemData(
     title: StringConst.AERIUM_V2,
@@ -642,7 +652,7 @@ class Projects {
     isLive: true,
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.AERIUM_V2_GITHUB_URL,
-    webUrl: StringConst.AERIUM_V2_WEB_URL,
+    webUrl: "https://www.google.com",
   );
   static ProjectItemData OUTFITR = ProjectItemData(
     title: StringConst.OUTFITR,
@@ -665,7 +675,7 @@ class Projects {
     isPublic: true,
     technologyUsed: StringConst.FLUTTER,
     gitHubUrl: StringConst.OUTFITR_GITHUB_URL,
-    webUrl: StringConst.OUTFITR_WEB_URL,
+    webUrl: "https://www.google.com",
   );
 }
 

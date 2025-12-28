@@ -52,12 +52,12 @@ class ImagePath {
   
 
   // Certifications
-  static const String ANDROID_BASICS_CERT = "$imageDir/android_basics_cert.png";
-  static const String CLOUD_DEVELOPER_CERT = "$imageDir/cloud_developer_cert.png";
-  static const String CMU_MASTERS_CERT = "$imageDir/cmu_cert.png";
-  static const String ASSOCIATE_ANDROID_DEV =
-      "$imageDir/associate_android_dev.png";
-  static const String DATA_SCIENCE_CERT = "$imageDir/data_science_cert.png";
+  static const String certsDir = "$imageDir/certs";
+  static const String CERT_1_JPEG = "$certsDir/1.jpeg";
+  static const String CERT_2_JPEG = "$certsDir/2.jpeg";
+  static const String CERT_3_JPEG = "$certsDir/3.jpeg";
+  static const String CERT_1_PDF = "$certsDir/1.pdf";
+  static const String CERT_2_PDF = "$certsDir/2.pdf";
 
   // Projects
 

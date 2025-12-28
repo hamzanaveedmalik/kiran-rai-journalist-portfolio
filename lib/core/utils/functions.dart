@@ -1,11 +1,24 @@
 import 'package:aerium/presentation/pages/project_detail/project_detail_page.dart';
 import 'package:aerium/presentation/widgets/project_item.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 class Functions {
   static void launchUrl(String url) async {
-    await launch(url);
+    try {
+      // Ensure URL has a protocol
+      String urlWithProtocol = url;
+      if (!url.startsWith('http://') && !url.startsWith('https://')) {
+        urlWithProtocol = 'https://$url';
+      }
+      final Uri uri = Uri.parse(urlWithProtocol);
+      await url_launcher.launchUrl(
+        uri,
+        mode: url_launcher.LaunchMode.externalApplication,
+      );
+    } catch (e) {
+      print('Error launching URL: $e');
+    }
   }
 
   static Size textSize({

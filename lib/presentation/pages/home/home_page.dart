@@ -299,12 +299,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,
             onTap: () {
-              Functions.navigateToProject(
-                context: context,
-                dataSource: data,
-                currentProject: data[index],
-                currentProjectIndex: index,
-              );
+              String url = data[index].webUrl.isNotEmpty 
+                  ? data[index].webUrl 
+                  : "https://www.google.com";
+              Functions.launchUrl(url);
             },
           ),
         ),
@@ -331,12 +329,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,
             onTap: () {
-              Functions.navigateToProject(
-                context: context,
-                dataSource: data,
-                currentProject: data[index],
-                currentProjectIndex: index,
-              );
+              String url = data[index].webUrl.isNotEmpty 
+                  ? data[index].webUrl 
+                  : "https://www.google.com";
+              Functions.launchUrl(url);
             },
           ),
         ),

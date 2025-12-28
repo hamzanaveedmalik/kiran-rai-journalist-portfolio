@@ -1,7 +1,6 @@
 import 'package:aerium/core/layout/adaptive.dart';
 import 'package:aerium/core/utils/functions.dart';
 import 'package:aerium/presentation/pages/widgets/animated_footer.dart';
-import 'package:aerium/presentation/pages/works/widgets/noteworthy_projects.dart';
 import 'package:aerium/presentation/pages/widgets/page_header.dart';
 import 'package:aerium/presentation/widgets/custom_spacer.dart';
 import 'package:aerium/presentation/widgets/page_wrapper.dart';
@@ -49,18 +48,6 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
     double subHeight = (3 / 4) * projectItemHeight;
     double extra = projectItemHeight - subHeight;
 
-    EdgeInsetsGeometry padding = EdgeInsets.only(
-      left: responsiveSize(
-        context,
-        assignWidth(context, 0.10),
-        assignWidth(context, 0.15),
-      ),
-      right: responsiveSize(
-        context,
-        assignWidth(context, 0.10),
-        assignWidth(context, 0.10),
-      ),
-    );
     return PageWrapper(
       selectedRoute: WorksPage.worksPageRoute,
       selectedPageName: StringConst.WORKS,
@@ -106,13 +93,6 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
             },
           ),
           CustomSpacer(heightFactor: 0.1),
-          Container(
-            child: Padding(
-              padding: padding,
-              child: NoteWorthyProjects(),
-            ),
-          ),
-          CustomSpacer(heightFactor: 0.15),
           AnimatedFooter(),
         ],
       ),
@@ -142,12 +122,10 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,
             onTap: () {
-             Functions.navigateToProject(
-                context: context,
-                dataSource: data,
-                currentProject: data[index],
-                currentProjectIndex: index,
-              );
+              String url = data[index].webUrl.isNotEmpty 
+                  ? data[index].webUrl 
+                  : "https://www.google.com";
+              Functions.launchUrl(url);
             },
           ),
         ),
@@ -174,13 +152,10 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,
             onTap: () {
-              Functions.navigateToProject(
-                context: context,
-                dataSource: data,
-                currentProject: data[index],
-                currentProjectIndex: index,
-              );
-             
+              String url = data[index].webUrl.isNotEmpty 
+                  ? data[index].webUrl 
+                  : "https://www.google.com";
+              Functions.launchUrl(url);
             },
           ),
         ),

@@ -82,7 +82,7 @@ class StringConst {
   static const String ABOUT_DEV_CONTACT_SOCIAL = "Social.";
   static const String ABOUT_DEV_CONTACT_EMAIL = "Email.";
   static const String FAMOUS_QUOTE =
-      ""The purpose of journalism is thus to provide citizens with the information they need to make the best possible decisions about their lives, their communities, their societies, and their governments."";
+      "The purpose of journalism is thus to provide citizens with the information they need to make the best possible decisions about their lives, their communities, their societies, and their governments.";
   static const String FAMOUS_QUOTE_AUTHOR = "Bill Kovach & Tom Rosenstiel";
   static const String WORK_TOGETHER = "Let's work together.";
   static const String AVAILABLE_FOR_FREELANCE =
@@ -341,9 +341,9 @@ class StringConst {
   static const String FOODY_BITE_GITHUB_URL =
       "https://github.com/david-legend/foodybite";
 
-  static const String OTP_TEXT_FIELD = "Otp Textfield";
+  static const String OTP_TEXT_FIELD = "Khaleej Times";
   static const String OTP_TEXT_FIELD_PLATFORM = "Flutter Package/Library.";
-  static const String OTP_TEXT_FIELD_CATEGORY = "Package.";
+  static const String OTP_TEXT_FIELD_CATEGORY = "News Agency";
   static const String OTP_TEXT_FIELD_SUBTITLE =
       "A useful flutter package for helping with otp";
   static const String OTP_TEXT_FIELD_DETAIL =
@@ -376,9 +376,9 @@ class StringConst {
   static const String FLUTTER_CATALOG_GITHUB_URL =
       "https://github.com/david-legend/flutter_catalog";
 
-  static const String AERIUM = "Aerium";
+  static const String AERIUM = "AP News";
   static const String AERIUM_PLATFORM = "Web.";
-  static const String AERIUM_CATEGORY = "Portfolio / CV.";
+  static const String AERIUM_CATEGORY = "News Agency";
   static const String AERIUM_DESIGNER = "Pavel G.";
   static const String AERIUM_SUBTITLE =
       "A progressive web app for showcasing your portfolio.";
@@ -388,7 +388,7 @@ class StringConst {
       "https://github.com/david-legend/aerium";
   static const String AERIUM_WEB_URL = "http://david-legend.github.io/aerium";
 
-  static const String AERIUM_V2 = "Aerium V2 ";
+  static const String AERIUM_V2 = "Times of India";
   static const String AERIUM_V2_PLATFORM = "Web.";
   static const String AERIUM_V2_CATEGORY = "Portfolio / CV.";
   static const String AERIUM_V2_DESIGNER = "Julius G.";

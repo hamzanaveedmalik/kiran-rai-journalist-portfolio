@@ -9,6 +9,7 @@ import 'package:aerium/presentation/widgets/animated_text_slide_box_transition.d
 import 'package:aerium/presentation/widgets/content_area.dart';
 import 'package:aerium/presentation/widgets/custom_spacer.dart';
 import 'package:aerium/presentation/widgets/page_wrapper.dart';
+import 'package:aerium/presentation/widgets/photo_grid.dart';
 import 'package:aerium/presentation/widgets/spaces.dart';
 import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
   late AnimationController _storyController;
   late AnimationController _contactController;
   late AnimationController _quoteController;
+  late AnimationController _photosController;
 
   @override
   void initState() {
@@ -49,6 +51,10 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       duration: const Duration(milliseconds: 1200),
       vsync: this,
     );
+    _photosController = AnimationController(
+      duration: const Duration(milliseconds: 1200),
+      vsync: this,
+    );
 
     super.initState();
   }
@@ -60,6 +66,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
     // Technology controllers removed
     _contactController.dispose();
     _quoteController.dispose();
+    _photosController.dispose();
     super.dispose();
   }
 
@@ -271,6 +278,65 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                     ),
                   ),
                   CustomSpacer(heightFactor: 0.2),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: responsiveSize(
+                context,
+                assignWidth(context, 0.10),
+                assignWidth(context, 0.15),
+              ),
+              right: responsiveSize(
+                context,
+                assignWidth(context, 0.10),
+                assignWidth(context, 0.10),
+              ),
+              top: responsiveSize(
+                context,
+                assignHeight(context, 0.04),
+                assignHeight(context, 0.06),
+              ),
+              bottom: responsiveSize(
+                context,
+                assignHeight(context, 0.02),
+                assignHeight(context, 0.04),
+              ),
+            ),
+            child: ContentArea(
+              width: contentAreaWidth,
+              child: Column(
+                children: [
+                  VisibilityDetector(
+                    key: Key('photos-section'),
+                    onVisibilityChanged: (visibilityInfo) {
+                      double visiblePercentage =
+                          visibilityInfo.visibleFraction * 100;
+                      if (visiblePercentage > 50) {
+                        _photosController.forward();
+                      }
+                    },
+                    child: ContentBuilder(
+                      controller: _photosController,
+                      number: "/04 ",
+                      width: contentAreaWidth,
+                      section: "PHOTOS",
+                      title: "Gallery.",
+                      body: Column(
+                        children: [
+                          SpaceH20(),
+                          Center(
+                            child: PhotoGrid(
+                              photoPaths: Data.photoPaths,
+                              crossAxisCount: 5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
