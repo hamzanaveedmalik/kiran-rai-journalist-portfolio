@@ -1,7 +1,6 @@
 import 'package:aerium/core/layout/adaptive.dart';
 import 'package:aerium/core/utils/functions.dart';
 import 'package:aerium/presentation/pages/about/widgets/about_header.dart';
-import 'package:aerium/presentation/pages/about/widgets/technology_section.dart';
 import 'package:aerium/presentation/pages/widgets/animated_footer.dart';
 import 'package:aerium/presentation/pages/widgets/socials.dart';
 import 'package:aerium/presentation/widgets/animated_line_through_text.dart';
@@ -28,9 +27,7 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
   late AnimationController _controller;
   late AnimationController _storyController;
-  late AnimationController _technologyController;
   late AnimationController _contactController;
-  late AnimationController _technologyListController;
   late AnimationController _quoteController;
 
   @override
@@ -43,14 +40,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       duration: const Duration(milliseconds: 1200),
       vsync: this,
     );
-    _technologyController = AnimationController(
-      duration: const Duration(milliseconds: 1200),
-      vsync: this,
-    );
-    _technologyListController = AnimationController(
-      duration: const Duration(milliseconds: 1200),
-      vsync: this,
-    );
+    // Technology controllers removed
     _contactController = AnimationController(
       duration: const Duration(milliseconds: 1200),
       vsync: this,
@@ -67,8 +57,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
   void dispose() {
     _controller.dispose();
     _storyController.dispose();
-    _technologyController.dispose();
-    _technologyListController.dispose();
+    // Technology controllers removed
     _contactController.dispose();
     _quoteController.dispose();
     super.dispose();
@@ -113,7 +102,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
     TextStyle? bodyText2Style =
         textTheme.bodyLarge?.copyWith(color: AppColors.grey750);
     TextStyle? titleStyle = textTheme.titleMedium?.copyWith(
-      color: AppColors.black,
+      color: AppColors.deepNavy,
       fontSize: responsiveSize(
         context,
         Sizes.TEXT_SIZE_16,
@@ -124,10 +113,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       parent: _storyController,
       curve: Interval(0.6, 1.0, curve: Curves.ease),
     );
-    CurvedAnimation _technologySectionAnimation = CurvedAnimation(
-      parent: _technologyController,
-      curve: Interval(0.6, 1.0, curve: Curves.fastOutSlowIn),
-    );
+    // Technology section animation removed
     double widthOfBody = responsiveSize(
       context,
       assignWidth(context, 0.75),
@@ -198,54 +184,6 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                             textStyle: bodyText1Style,
                           ),
                         ],
-                      ),
-                    ),
-                  ),
-                  CustomSpacer(heightFactor: 0.1),
-                  VisibilityDetector(
-                    key: Key('technology-section'),
-                    onVisibilityChanged: (visibilityInfo) {
-                      double visiblePercentage =
-                          visibilityInfo.visibleFraction * 100;
-                      if (visiblePercentage > 50) {
-                        _technologyController.forward();
-                      }
-                    },
-                    child: ContentBuilder(
-                      controller: _technologyController,
-                      number: "/02 ",
-                      width: contentAreaWidth,
-                      section: StringConst.ABOUT_DEV_TECHNOLOGY.toUpperCase(),
-                      title: StringConst.ABOUT_DEV_TECHNOLOGY_TITLE,
-                      body: Column(
-                        children: [
-                          AnimatedPositionedText(
-                            controller: _technologySectionAnimation,
-                            width: widthOfBody,
-                            maxLines: 12,
-                            text: StringConst.ABOUT_DEV_TECHNOLOGY_CONTENT,
-                            textStyle: bodyText1Style,
-                          ),
-                        ],
-                      ),
-                      footer: VisibilityDetector(
-                        key: Key('technology-list'),
-                        onVisibilityChanged: (visibilityInfo) {
-                          double visiblePercentage =
-                              visibilityInfo.visibleFraction * 100;
-                          if (visiblePercentage > 60) {
-                            _technologyListController.forward();
-                          }
-                        },
-                        child: Column(
-                          children: [
-                            SpaceH40(),
-                            TechnologySection(
-                              width: contentAreaWidth,
-                              controller: _technologyListController,
-                            ),
-                          ],
-                        ),
                       ),
                     ),
                   ),
