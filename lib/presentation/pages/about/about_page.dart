@@ -85,8 +85,8 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       ),
       top: responsiveSize(
         context,
-        assignHeight(context, 0.15),
-        assignHeight(context, 0.15),
+        assignHeight(context, 0.08),
+        assignHeight(context, 0.08),
         // sm: assignWidth(context, 0.10),
       ),
     );
@@ -138,50 +138,38 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
               width: contentAreaWidth,
               child: Column(
                 children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        flex: 3,
-                        child: AboutHeader(
-                          width: contentAreaWidth * 0.65,
-                          controller: _controller,
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: VisibilityDetector(
-                          key: Key('story-section'),
-                          onVisibilityChanged: (visibilityInfo) {
-                            double visiblePercentage =
-                                visibilityInfo.visibleFraction * 100;
-                            if (visiblePercentage > 10) {
-                              _storyController.forward();
-                            }
-                          },
-                          child: ContentBuilder(
-                            controller: _storyController,
-                            number: "/01 ",
-                            width: contentAreaWidth * 0.35,
-                            section: StringConst.ABOUT_DEV_STORY.toUpperCase(),
-                            title: StringConst.ABOUT_DEV_STORY_TITLE,
-                            body: Column(
-                              children: [
-                                AnimatedPositionedText(
-                                  controller: _storySectionAnimation,
-                                  width: widthOfBody * 0.5,
-                                  maxLines: 10,
-                                  text: StringConst.ABOUT_DEV_STORY_CONTENT_1,
-                                  textStyle: bodyText1Style?.copyWith(
-                                    fontSize: Sizes.TEXT_SIZE_16,
-                                  ),
-                                ),
-                              ],
-                            ),
+                  AboutHeader(
+                    width: contentAreaWidth,
+                    controller: _controller,
+                  ),
+                  CustomSpacer(heightFactor: 0.05),
+                  VisibilityDetector(
+                    key: Key('story-section'),
+                    onVisibilityChanged: (visibilityInfo) {
+                      double visiblePercentage =
+                          visibilityInfo.visibleFraction * 100;
+                      if (visiblePercentage > 10) {
+                        _storyController.forward();
+                      }
+                    },
+                    child: ContentBuilder(
+                      controller: _storyController,
+                      number: "/01 ",
+                      width: contentAreaWidth,
+                      section: StringConst.ABOUT_DEV_STORY.toUpperCase(),
+                      title: StringConst.ABOUT_DEV_STORY_TITLE,
+                      body: Column(
+                        children: [
+                          AnimatedPositionedText(
+                            controller: _storySectionAnimation,
+                            width: widthOfBody,
+                            maxLines: 30,
+                            text: StringConst.ABOUT_DEV_STORY_CONTENT_1,
+                            textStyle: bodyText1Style,
                           ),
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                   CustomSpacer(heightFactor: 0.1),
                   VisibilityDetector(
