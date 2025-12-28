@@ -47,10 +47,9 @@ class StringConst {
   static const String MESSAGE_ERROR_MSG =
       "* Please enter something to send this form";
   static const String SEND_MESSAGE = "Send Message";
-  static const String COPYRIGHT = "©  2025  Built by  $DEV_NAME,";
-  static const String DESIGNED_BY = "Designed by Intelliwave.";
-  static const String DESIGN_LINK =
-      "www.intelliwave.co";
+  static const String COPYRIGHT = "©  2025  Built by  ";
+  static const String DESIGN_LINK = "www.intelliwave.co";
+  static const String DESIGNED_BY = "Intelliwave";
   static const String MESSAGE_ME = "Message me";
   static const String EMAIL_RESPONSE = "Thanks for reaching out to me! I will get back to you ASAP";
   static const String EMAIL_FAILED_RESPONSE = "Something went wrong. Please send me an email manually - ${StringConst.DEV_EMAIL}";
@@ -87,7 +86,7 @@ class StringConst {
   static const String FAMOUS_QUOTE_AUTHOR = "Albert Einstein";
   static const String WORK_TOGETHER = "Let's work together.";
   static const String AVAILABLE_FOR_FREELANCE =
-      "I'm available for Consultancy & Freelancing.";
+      "I'm available for journalism commissions, interviews, and editorial work.";
   static const String SAY_HELLO = "Say Hello";
 
   // Works Page

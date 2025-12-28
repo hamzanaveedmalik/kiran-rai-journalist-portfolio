@@ -74,12 +74,6 @@ class SimpleFooterSm extends StatelessWidget {
               StringConst.COPYRIGHT,
               style: style,
             ),
-          ],
-        ),
-        SpaceH12(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
             InkWell(
               onTap: () {
                 Functions.launchUrl(StringConst.DESIGN_LINK);
@@ -98,7 +92,6 @@ class SimpleFooterSm extends StatelessWidget {
           ],
         ),
         SpaceH8(),
-        BuiltWithFlutter(),
       ],
     );
   }
@@ -130,7 +123,6 @@ class SimpleFooterLg extends StatelessWidget {
               StringConst.COPYRIGHT,
               style: style,
             ),
-            SpaceW8(),
             InkWell(
               onTap: () {
                 Functions.launchUrl(StringConst.DESIGN_LINK);
@@ -149,7 +141,6 @@ class SimpleFooterLg extends StatelessWidget {
           ],
         ),
         SpaceH8(),
-        BuiltWithFlutter(),
       ],
     );
   }
