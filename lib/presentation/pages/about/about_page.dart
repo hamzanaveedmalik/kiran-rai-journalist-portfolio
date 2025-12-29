@@ -170,7 +170,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           AnimatedPositionedText(
                             controller: _storySectionAnimation,
                             width: widthOfBody,
-                            maxLines: 30,
+                            maxLines: 999,
                             text: StringConst.ABOUT_DEV_STORY_CONTENT_1,
                             textStyle: bodyText1Style,
                           ),

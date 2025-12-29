@@ -107,9 +107,9 @@ class _HomePageHeaderState extends State<HomePageHeader>
       ),
       top: responsiveSize(
         context,
-        30 * 0.65, // Reduced by 35%
-        screenHeight * 0.15 * 0.65, // Moved up 10% (from 0.25 to 0.15)
-        sm: screenHeight * 0.25 * 0.65, // Reduced by 35%
+        screenHeight * 0.05 + 30 * 0.65, // Moved down 5% + reduced by 35%
+        screenHeight * 0.15 * 0.65 + screenHeight * 0.05, // Moved down 5%
+        sm: screenHeight * 0.25 * 0.65 + screenHeight * 0.05, // Moved down 5%
       ),
       bottom: responsiveSize(context, 20, 40),
     );

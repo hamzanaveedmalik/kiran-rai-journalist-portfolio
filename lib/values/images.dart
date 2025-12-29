@@ -32,7 +32,7 @@ class ImagePath {
   static const String MEDITATION = "$imageDir/meditation.png";
   static const String ABOUT_PORTRAIT = "$imageDir/about_portrait.png";
   static const String DEV_ABOUT = "$imageDir/dev-about.jpg";
-  static const String DEV_MEDITATE = "$imageDir/cop-28.png";
+  static const String DEV_MEDITATE = "$imageDir/image1.jpeg";
   
   static const String DEV_SKILLS = "$imageDir/skills.png";
   static const String DEV_SKILLS_1 = "$imageDir/skills1.png";
@@ -43,7 +43,7 @@ class ImagePath {
   static const String tickerLogoDir = "$imageDir/ticker-logos";
   static const String FORBES = "$tickerLogoDir/forbes.svg";
   static const String ASSOCIATED_PRESS = "$tickerLogoDir/associated-press.svg";
-  static const String ATHLON_SPORTS = "$tickerLogoDir/athlon-sports.svg";
+  static const String ATHLON_SPORTS = "$tickerLogoDir/athlon.png";
   static const String DAILY_EXPRESS = "$tickerLogoDir/daily-express.svg";
   static const String GQ = "$tickerLogoDir/gq.svg";
   static const String KHALEEJ_TIMES = "$tickerLogoDir/khaleej-times.svg";
@@ -53,11 +53,11 @@ class ImagePath {
 
   // Certifications
   static const String certsDir = "$imageDir/certs";
-  static const String CERT_1_JPEG = "$certsDir/1.jpeg";
-  static const String CERT_2_JPEG = "$certsDir/2.jpeg";
-  static const String CERT_3_JPEG = "$certsDir/3.jpeg";
-  static const String CERT_1_PDF = "$certsDir/1.pdf";
-  static const String CERT_2_PDF = "$certsDir/2.pdf";
+  static const String CERT_1 = "$certsDir/Screenshot 2025-12-29 at 20.26.52.png";
+  static const String CERT_2 = "$certsDir/Screenshot 2025-12-29 at 20.27.14.png";
+  static const String CERT_3 = "$certsDir/WhatsApp Image 2025-12-09 at 18.21.51.jpeg";
+  static const String CERT_4 = "$certsDir/WhatsApp Image 2025-12-09 at 18.21.52 (1).jpeg";
+  static const String CERT_5 = "$certsDir/WhatsApp Image 2025-12-09 at 18.21.52.jpeg";
 
   // Projects
 

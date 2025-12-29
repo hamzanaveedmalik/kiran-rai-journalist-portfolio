@@ -78,6 +78,9 @@ class _LogoTickerState extends State<LogoTicker> with SingleTickerProviderStateM
             children: List.generate(widget.logos.length, (innerIndex) {
               final String logoPath = widget.logos[innerIndex];
               final bool isSvg = logoPath.endsWith('.svg');
+              final bool isAthlon = logoPath == ImagePath.ATHLON_SPORTS;
+              final bool isGQ = logoPath == ImagePath.GQ;
+              final double sizeMultiplier = (isAthlon || isGQ) ? 2.0 : 1.0;
               
               return Container(
                 height: widget.height,
@@ -86,18 +89,18 @@ class _LogoTickerState extends State<LogoTicker> with SingleTickerProviderStateM
                   child: isSvg
                       ? SvgPicture.asset(
                           logoPath,
-                          height: widget.height * 0.7,
-                          width: widget.height * 1.5, // Make logos wider relative to height
+                          height: widget.height * 0.7 * sizeMultiplier,
+                          width: widget.height * 1.5 * sizeMultiplier, // Make logos wider relative to height
                           placeholderBuilder: (context) => Container(
-                            height: widget.height * 0.7,
-                            width: widget.height * 1.5,
+                            height: widget.height * 0.7 * sizeMultiplier,
+                            width: widget.height * 1.5 * sizeMultiplier,
                             color: Colors.grey[200],
                           ),
                         )
                       : Image.asset(
                           logoPath,
-                          height: widget.height * 0.7,
-                          width: widget.height * 1.5, // Make logos wider relative to height
+                          height: widget.height * 0.7 * sizeMultiplier,
+                          width: widget.height * 1.5 * sizeMultiplier, // Make logos wider relative to height
                           fit: BoxFit.contain,
                         ),
                 ),

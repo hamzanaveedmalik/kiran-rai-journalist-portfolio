@@ -118,7 +118,7 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
             projectItemheight: projectHeight.toDouble(),
             subheight: subHeight.toDouble(),
             backgroundColor: AppColors.accentColor2.withOpacity(0.35),
-            title: data[index].title.toLowerCase(),
+            title: Functions.formatProjectTitle(data[index].title),
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,
             onTap: () {
@@ -148,7 +148,7 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
           child: ProjectItemSm(
             projectNumber: index + 1 > 9 ? "${index + 1}" : "0${index + 1}",
             imageUrl: data[index].image,
-            title: data[index].title.toLowerCase(),
+            title: Functions.formatProjectTitle(data[index].title),
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,
             onTap: () {

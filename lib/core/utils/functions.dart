@@ -1,7 +1,10 @@
 import 'package:aerium/presentation/pages/project_detail/project_detail_page.dart';
 import 'package:aerium/presentation/widgets/project_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
+import 'functions_stub.dart'
+    if (dart.library.html) 'functions_web.dart' as web_functions;
 
 class Functions {
   static void launchUrl(String url) async {
@@ -59,5 +62,39 @@ class Functions {
         hasNextProject: hasNextProject,
       ),
     );
+  }
+
+  static String formatProjectTitle(String title) {
+    // Special case: GQ should be all caps
+    if (title.toLowerCase() == 'gq') {
+      return 'GQ';
+    }
+    // Special case: AP News should have "AP" in all caps
+    if (title.toLowerCase() == 'ap news') {
+      return 'AP News';
+    }
+    // Convert to title case (capitalize first letter of each word)
+    return title.split(' ').map((word) {
+      if (word.isEmpty) return word;
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }).join(' ');
+  }
+
+  static void downloadResume(String assetPath) async {
+    try {
+      if (kIsWeb) {
+        // For web, create a download link
+        web_functions.downloadResumeWeb(assetPath);
+      } else {
+        // For mobile, use url_launcher
+        final Uri uri = Uri.parse(assetPath);
+        await url_launcher.launchUrl(
+          uri,
+          mode: url_launcher.LaunchMode.externalApplication,
+        );
+      }
+    } catch (e) {
+      print('Error downloading resume: $e');
+    }
   }
 }

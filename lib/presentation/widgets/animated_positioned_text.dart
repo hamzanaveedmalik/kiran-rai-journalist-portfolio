@@ -59,9 +59,24 @@ class _AnimatedPositionedTextState extends State<AnimatedPositionedText> {
     textHeight = size.height * widget.factor;
   }
 
+  Size _textSizeUnlimited(String text, TextStyle? style) {
+    final TextPainter textPainter = TextPainter(
+        text: TextSpan(text: text, style: style),
+        textDirection: TextDirection.ltr)
+      ..layout(minWidth: 0, maxWidth: widget.width);
+    return textPainter.size;
+  }
+
   @override
   Widget build(BuildContext context) {
-    setTextWidthAndHeight();
+    if (widget.maxLines > 100) {
+      // For unlimited lines, calculate height without maxLines restriction
+      final unlimitedSize = _textSizeUnlimited(widget.text, widget.textStyle);
+      textWidth = unlimitedSize.width;
+      textHeight = unlimitedSize.height * widget.factor;
+    } else {
+      setTextWidthAndHeight();
+    }
 
     return Container(
       height: textHeight,
@@ -73,9 +88,12 @@ class _AnimatedPositionedTextState extends State<AnimatedPositionedText> {
               widget.text,
               textAlign: widget.textAlign,
               style: widget.textStyle,
+              maxLines: widget.maxLines > 100 ? null : widget.maxLines,
+              overflow: widget.maxLines > 100 ? null : TextOverflow.ellipsis,
             ),
           ),
         ],
+        clipBehavior: Clip.none,
       ),
     );
   }

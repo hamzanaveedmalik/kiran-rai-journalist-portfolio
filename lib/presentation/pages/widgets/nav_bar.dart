@@ -108,7 +108,7 @@ class NavBar extends StatelessWidget {
                 onHoverColor: appLogoColor,
                 title: StringConst.RESUME.toUpperCase(),
                 onPressed: () {
-                  Functions.launchUrl(DocumentPath.CV);
+                  Functions.downloadResume(DocumentPath.CV);
                 },
               ),
             ],

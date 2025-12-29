@@ -18,13 +18,13 @@ class StringConst {
   static const String PHONE_NUMBER = "Phone Number";
   static const String RESUME = "Resume";
   static const String CERTIFICATIONS = "Certifications";
-  static const String EMAIL_VALUE = "j.goreproductions@hotmail.co.uk";
+  static const String EMAIL_VALUE = "kiran@nypress.co.uk";
 
   // Home Page
   static const String HI = "Kiran Rai";
   static const String DEV_INTRO = "Political & Sports Journalist";
   static const String DEV_TITLE = "Award-Winning Political, Sports Journalist and Press Assistant.";
-  static const String DEV_DESC = "Kiran Rai is a British journalist, columnist whose work sits at the intersection of sport, politics, power, and culture. With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence.";
+  static const String DEV_DESC = "18+ years covering world leaders, 65+ major sporting events, and global reporting from No. 10 Downing Street and the House of Commons to the United Nations. Published in Forbes, GQ, Sports Illustrated, and TIME.";
   static const String SEE_MY_WORKS = "See my work";
   static const String SCROLL_DOWN = "Scroll Down";
   static const String CRAFTED_WITH_LOVE = "Coverage Areas";
@@ -67,11 +67,9 @@ class StringConst {
   static const String ABOUT_DEV_STORY_TITLE =
       "About Kiran Rai";
   static const String ABOUT_DEV_STORY_CONTENT_1 =
-      "Kiran Rai is a British journalist, columnist whose work sits at the intersection of sport, politics, power, and culture. With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence.\n\nOne of the world's most widely travelled journalists, Rai has reported from 65 of the globe's most prestigious sporting events, including the FIFA World Cup, Wimbledon, FA Cup Final, Formula 1 Grand Prix, NBA, UFC, MotoGP, WTA Tour, Major League Baseball, ECB international cricket, the Para Athletics World Cup, and the Ballon d'Or ceremony in Paris (2025). His exclusive interviews with boxing legends—Mike Tyson, George Foreman, Larry Holmes, Evander Holyfield, Tyson Fury, Anthony Joshua, and Canelo Álvarez—have made international headlines, establishing him as a leading voice in elite sport.";
-  static const String ABOUT_DEV_STORY_CONTENT_2 =
-      "Rai's journalism has appeared in Forbes, GQ, Sports Illustrated, the Daily Express, the Daily Mirror UK, and in over 976 newspapers worldwide. His work has also been featured in Time Magazine, Khaleej Times, Associated Press, Times of India, and Mail Online US. He has served as a Sports Journalist at the Daily Sport, a news reporter at the Daily Express, and a UK contributor for Athlon Sports, solidifying his authority across British and international media.\n\nBeyond sport, Rai operates at the forefront of global politics and diplomacy. He served as assistant to MP Afzal Khan at the UK House of Commons and as a press assistant at the United Nations during COP28, where he challenged world leaders, senior policymakers, and leading scientists on climate change, sustainability, and the future of the planet. At COP28, he was invited to meet Cardinal Miguel Ángel Ayuso Guixot, a cardinal of Pope Francis, reflecting his extraordinary access across political, scientific, and religious leadership.";
-  static const String ABOUT_DEV_STORY_CONTENT_3 =
-      "Rai's political reporting spans continents. He covered the Indian general elections, reporting on both the Congress and BJP campaigns in Delhi, and met Prime Minister Narendra Modi and senior ministers. He also attended Expo 2020 in Dubai, conducting high-profile interviews with foreign ministers and diplomats from around the world, demonstrating his reach in international affairs.\n\nRai has interviewed and interacted with royalty and historic figures worldwide, including HRH Princess Anne, HRH Prince Harry, HRH Prince Richard, HRH Princess Tessy of Luxembourg, Sarah Ferguson, Duchess of York, and HRH Noora Khalifa of the Kingdom of Bahrain. He attended the State Funeral of Queen Elizabeth II at Westminster and a private event at 10 Downing Street with former Prime Minister Boris Johnson, placing him at the heart of historic moments.\n\nIn landmark exclusives, Rai has interviewed Taliban spokesperson Suhail Shaheen ahead of the U.S. military withdrawal from Afghanistan, Nobel Peace Prize laureates, and in personal features, Errol Musk, the father of Elon Musk, offering insight into one of the world's most high-profile families.\n\nRai has forged lasting connections with the legacies of history-makers, including Dr. Bernice King (daughter of Martin Luther King Jr.), Nico Ali Walsh (grandson of Muhammad Ali), and the families of Winston Churchill, Mahatma Gandhi, and Nelson Mandela.\n\nDuring the COVID-19 lockdown in 2020, he conceived The 500 Most Influential People in Asia, a groundbreaking Zoom-based interview series featuring Bollywood superstars, Olympic gold medalists, political leaders, and cultural icons from seven Asian countries, generating over 345 million reshares and coverage in Time Magazine, The Times of India, Khaleej Times, and other leading outlets.\n\nFrom world leaders and royalty to elite athletes, scientists, and cultural icons, Kiran Rai's journalism does more than document events—it interrogates power, shapes global narratives, and connects audiences across continents. His work is not just published; it is remembered, continuing to define the global conversation in an interconnected world.";
+      "Kiran Rai is a British journalist, columnist whose work sits at the intersection of sport, politics, power, and culture. With over 18 years of fearless reporting, Rai has built a career defined by unrivalled access, groundbreaking storytelling, and global influence.\n\nOne of the world's most widely travelled journalists, Rai has reported from 65 of the globe's most prestigious sporting events, including the FIFA World Cup, Wimbledon, FA Cup Final, Formula 1 Grand Prix, NBA, UFC, MotoGP, WTA Tour, Major League Baseball, ECB international cricket, the Para Athletics World Cup, and the Ballon d'Or ceremony in Paris (2025). His exclusive interviews with boxing legends—Mike Tyson, George Foreman, Larry Holmes, Evander Holyfield, Tyson Fury, Anthony Joshua, and Canelo Álvarez—have made international headlines, establishing him as a leading voice in elite sport.\n\nRai's journalism has appeared in Forbes, GQ, Sports Illustrated, the Daily Express, the Daily Mirror UK, and in over 976 newspapers worldwide. His work has also been featured in Time Magazine, Khaleej Times, Associated Press, Times of India, and Mail Online US. He has served as a Sports Journalist at the Daily Sport, a news reporter at the Daily Express, and a UK contributor for Athlon Sports, solidifying his authority across British and international media.\n\nBeyond sport, Rai operates at the forefront of global politics and diplomacy. He served as assistant to MP Afzal Khan at the UK House of Commons and as a press assistant at the United Nations during COP28, where he challenged world leaders, senior policymakers, and leading scientists on climate change, sustainability, and the future of the planet. At COP28, he was invited to meet Cardinal Miguel Ángel Ayuso Guixot, a cardinal of Pope Francis, reflecting his extraordinary access across political, scientific, and religious leadership.\n\nRai's political reporting spans continents. He covered the Indian general elections, reporting on both the Congress and BJP campaigns in Delhi, and met Prime Minister Narendra Modi and senior ministers. He also attended Expo 2020 in Dubai, conducting high-profile interviews with foreign ministers and diplomats from around the world, demonstrating his reach in international affairs.\n\nRai has interviewed and interacted with royalty and historic figures worldwide, including HRH Princess Anne, HRH Prince Harry, HRH Prince Richard, HRH Princess Tessy of Luxembourg, Sarah Ferguson, Duchess of York, and HRH Noora Khalifa of the Kingdom of Bahrain. He attended the State Funeral of Queen Elizabeth II at Westminster and a private event at 10 Downing Street with former Prime Minister Boris Johnson, placing him at the heart of historic moments.\n\nIn landmark exclusives, Rai has interviewed Taliban spokesperson Suhail Shaheen ahead of the U.S. military withdrawal from Afghanistan, Nobel Peace Prize laureates, and in personal features, Errol Musk, the father of Elon Musk, offering insight into one of the world's most high-profile families.\n\nRai has forged lasting connections with the legacies of history-makers, including Dr. Bernice King (daughter of Martin Luther King Jr.), Nico Ali Walsh (grandson of Muhammad Ali), and the families of Winston Churchill, Mahatma Gandhi, and Nelson Mandela.\n\nDuring the COVID-19 lockdown in 2020, he conceived The 500 Most Influential People in Asia, a groundbreaking Zoom-based interview series featuring Bollywood superstars, Olympic gold medalists, political leaders, and cultural icons from seven Asian countries, generating over 345 million reshares and coverage in Time Magazine, The Times of India, Khaleej Times, and other leading outlets.\n\nFrom world leaders and royalty to elite athletes, scientists, and cultural icons, Kiran Rai's journalism does more than document events—it interrogates power, shapes global narratives, and connects audiences across continents. His work is not just published; it is remembered, continuing to define the global conversation in an interconnected world.";
+  static const String ABOUT_DEV_STORY_CONTENT_2 = "";
+  static const String ABOUT_DEV_STORY_CONTENT_3 = "";
   static const String ABOUT_DEV_TECHNOLOGY = "Technology";
   static const String MOBILE_TECH = "Mobile Technologies";
   static const String OTHER_TECH = "Web / Cloud / Design Technologies";
@@ -110,7 +108,7 @@ class StringConst {
   static const String VIEW = "View";
   static const String COMING_SOON = "COMING SOON !!";
   static const String BUILT_WITH_FLUTTER = "Built";
-  static const String DEV_EMAIL = "j.goreproductions@hotmail.co.uk";
+  static const String DEV_EMAIL = "kiran@nypress.co.uk";
   static const String EMAIL_URL = "mailto:<$DEV_EMAIL>?subject=&body=";
 
   static const String KEY_SKILLS = "KEY SKILLS";
@@ -317,7 +315,7 @@ class StringConst {
   static const String ROAM_PLAYSTORE_URL =
       "https://play.google.com/store/apps/details?id=com.davidcobbina.roam";
 
-  static const String LOGIN_CATALOG = "Times";
+  static const String LOGIN_CATALOG = "Time";
   static const String LOGIN_CATALOG_PLATFORM = "Android / IOS.";
   static const String LOGIN_CATALOG_CATEGORY = "British daily national newspaper";
   static const String LOGIN_CATALOG_SUBTITLE =
@@ -376,7 +374,7 @@ class StringConst {
   static const String FLUTTER_CATALOG_GITHUB_URL =
       "https://github.com/david-legend/flutter_catalog";
 
-  static const String AERIUM = "AP News";
+  static const String AERIUM = "Mail Online";
   static const String AERIUM_PLATFORM = "Web.";
   static const String AERIUM_CATEGORY = "News Agency";
   static const String AERIUM_DESIGNER = "Pavel G.";
@@ -390,7 +388,7 @@ class StringConst {
 
   static const String AERIUM_V2 = "Times of India";
   static const String AERIUM_V2_PLATFORM = "Web.";
-  static const String AERIUM_V2_CATEGORY = "Portfolio / CV.";
+  static const String AERIUM_V2_CATEGORY = "Indian Daily Newspaper";
   static const String AERIUM_V2_DESIGNER = "Julius G.";
   static const String AERIUM_V2_SUBTITLE =
       "A progressive web app for showcasing your portfolio.";
